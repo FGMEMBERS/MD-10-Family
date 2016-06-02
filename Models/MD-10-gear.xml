@@ -190,7 +190,7 @@
 		<name>Left main gear rear wheels</name>
 		<type>spin</type>
 		<object-name>GearL2Wheels</object-name>
-		<property>gear/gear[2]/rollspeed-ms</property>
+		<property>gear/gear[1]/rollspeed-ms</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -212,7 +212,6 @@
 		<expression>
 			<max>
 				<property>gear/gear[1]/compression-m</property>
-				<property>gear/gear[2]/compression-m</property>
 			</max>
 		</expression>
 		<axis>
@@ -232,7 +231,7 @@
 		<type>rotate</type>
 		<object-name>GearLScissorLo</object-name>
 		<object-name>GearLScissorHi</object-name>
-		<property>gear/gear[2]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>45</dep></entry>
 			<entry><ind>0.2</ind><dep>45</dep></entry>
@@ -253,7 +252,7 @@
 		<name>Left main gear upper retraction scissor</name>
 		<type>rotate</type>
 		<object-name>GearLScissorHi</object-name>
-		<property>gear/gear[2]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>-180</dep></entry>
 			<entry><ind>0.2</ind><dep>-180</dep></entry>
@@ -275,7 +274,7 @@
 		<type>rotate</type>
 		<object-name>Left main gear lower strut</object-name>
 		<object-name>Left main gear upper strut</object-name>
-		<property>gear/gear[2]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>84</dep></entry>
 			<entry><ind>0.2</ind><dep>84</dep></entry>
@@ -297,7 +296,7 @@
 		<name>Right main gear front wheels</name>
 		<type>spin</type>
 		<object-name>GearR1Wheels</object-name>
-		<property>gear/gear[3]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -314,7 +313,7 @@
 		<name>Right main gear rear wheels</name>
 		<type>spin</type>
 		<object-name>GearR2Wheels</object-name>
-		<property>gear/gear[4]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -335,8 +334,7 @@
 		<object-name>Right main gear rear wheels</object-name>
 		<expression>
 			<max>
-				<property>gear/gear[3]/compression-m</property>
-				<property>gear/gear[4]/compression-m</property>
+				<property>gear/gear[2]/compression-m</property>
 			</max>
 		</expression>
 		<axis>
@@ -356,7 +354,7 @@
 		<type>rotate</type>
 		<object-name>GearRScissorLo</object-name>
 		<object-name>GearRScissorHi</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>-45</dep></entry>
 			<entry><ind>0.2</ind><dep>-45</dep></entry>
@@ -377,7 +375,7 @@
 		<name>Right main gear upper retraction scissor</name>
 		<type>rotate</type>
 		<object-name>GearRScissorHi</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>180</dep></entry>
 			<entry><ind>0.2</ind><dep>180</dep></entry>
@@ -399,7 +397,7 @@
 		<type>rotate</type>
 		<object-name>Right main gear lower strut</object-name>
 		<object-name>Right main gear upper strut</object-name>
-		<property>gear/gear[4]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>-84</dep></entry>
 			<entry><ind>0.2</ind><dep>-84</dep></entry>
@@ -420,7 +418,7 @@
 		<name>Right main gear front wheels</name>
 		<type>spin</type>
 		<object-name>GearR1Wheels</object-name>
-		<property>gear/gear[3]/rollspeed-ms</property>
+		<property>gear/gear[2]/rollspeed-ms</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -438,7 +436,7 @@
 		<name>Center main gear wheels</name>
 		<type>spin</type>
 		<object-name>GearCWheels</object-name>
-		<property>gear/gear[5]/rollspeed-ms</property>
+		<property>gear/gear[3]/rollspeed-ms</property>
 		<factor>18.798</factor>
 		<axis>
 			<x>0</x>
@@ -458,7 +456,7 @@
 		<object-name>GearCCompressHi</object-name>
 		<object-name>GearCStrutLo</object-name>
 		<object-name>Center main gear wheels</object-name>
-		<property>gear/gear[5]/compression-m</property>
+		<property>gear/gear[3]/compression-m</property>
 		<axis>
 			<x>0</x>
 			<y>0</y>

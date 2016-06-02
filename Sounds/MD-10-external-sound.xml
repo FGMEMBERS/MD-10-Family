@@ -320,7 +320,7 @@
 	    <path>Aircraft/MD-10/Sounds/touchdown.wav</path>
 	    <mode>once</mode>
 	    <condition>
-		<property>gear/gear[2]/wow</property>
+		<property>gear/gear[1]/wow</property>
 	    </condition>
 	    <volume>
 		<offset>-0.75</offset>
@@ -331,7 +331,7 @@
 	    <path>Aircraft/MD-10/Sounds/touchdown.wav</path>
 	    <mode>once</mode>
 	    <condition>
-		<property>gear/gear[4]/wow</property>
+		<property>gear/gear[2]/wow</property>
 	    </condition>
 	    <volume>
 		<offset>-0.75</offset>

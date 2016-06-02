@@ -6,24 +6,7 @@
 <PropertyList>
 
 	<path>MD-10F-fuselage.ac</path>
-	
-	<!-- Lighting -->
-	<animation>
-		<name>Cabin lights</name>
-		<type>material</type>
-		<object-name>Windows</object-name>
-		<condition>
-			<greater-than>
-				<property>systems/electrical/outputs/cabin-lights</property>
-				<value>15</value>
-			</greater-than>
-		</condition>
-		<emission>
-			<red>0.5</red>
-			<green>0.4941</green>
-			<blue>0.3275</blue>
-		</emission>
-	</animation>
+
 
 	<!-- Cargo doors -->
 	<animation>
@@ -99,7 +82,6 @@
 		<type>pick</type>
 		<object-name>MainCargo</object-name>
 		<object-name>MainCargoInt</object-name>
-		<object-name>MC_NoWindows</object-name>
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>
@@ -119,7 +101,6 @@
 		<type>rotate</type>
 		<object-name>MainCargo</object-name>
 		<object-name>MainCargoInt</object-name>
-		<object-name>MC_NoWindows</object-name>
 		<property>sim/model/door-positions/cargo-main/position-norm</property>
 		<factor>165</factor>
 		<axis>
