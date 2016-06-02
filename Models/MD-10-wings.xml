@@ -329,7 +329,7 @@
 		<name>Left inner spoiler</name>
 		<type>rotate</type>
 		<object-name>SpoilerL1</object-name>
-		<property>surface-positions/spoiler-inner-pos-norm</property>
+		<property>/surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>3.721</x1-m>
@@ -347,7 +347,7 @@
 		<object-name>SpoilerL3</object-name>
 		<object-name>SpoilerL4</object-name>
 		<object-name>SpoilerL5</object-name>
-		<property>surface-positions/left-spoiler-outer-pos-norm</property>
+		<property>/surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>5.109</x1-m>
@@ -362,7 +362,7 @@
 		<name>Right inner spoiler</name>
 		<type>rotate</type>
 		<object-name>SpoilerR1</object-name>
-		<property>surface-positions/spoiler-inner-pos-norm</property>
+		<property>/surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>4.093</x1-m>
@@ -380,7 +380,7 @@
 		<object-name>SpoilerR3</object-name>
 		<object-name>SpoilerR4</object-name>
 		<object-name>SpoilerR5</object-name>
-		<property>surface-positions/right-spoiler-outer-pos-norm</property>
+		<property>/surface-positions/speedbrake-pos-norm</property>
 		<factor>45</factor>
 		<axis>
 			<x1-m>8.644</x1-m>
