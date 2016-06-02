@@ -5,7 +5,7 @@
 	<sim>
 		<model>
 			<livery>
-				<name>FedEx Express</name>
+				<name>Blank</name>
 				<texture>Liveries/MD-10P/WHT.png</texture>
 				<registration>N366FE</registration>
 				<configuration type="string">cargo</configuration>

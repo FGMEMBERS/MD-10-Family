@@ -4,7 +4,7 @@
 
   <!-- Left Nav Refuel-Lights -->
   <!-- <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/NavLightL.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/NavLightL.xml</path>
     <offsets>
       <x-m> -1.354 </x-m>
       <y-m> -14.665 </y-m>
@@ -13,7 +13,7 @@
 
   <!-- Right Nav Refuel-Lights -->
   <!-- <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/NavLightR.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/NavLightR.xml</path>
     <offsets>
       <x-m> -1.354 </x-m>
       <y-m>  14.665 </y-m>
@@ -23,7 +23,7 @@
 
   <!-- Strobe Refuel-Lights -->
   <!-- <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/StrobeLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/StrobeLight.xml</path>
     <offsets>
       <x-m>  8.342 </x-m>
       <y-m>  0.003 </y-m>
@@ -33,7 +33,7 @@
 
   <!-- Left wing -->
     <!--<model>
-	<path>Aircraft/MD-10/Models/Refuel-Lights/StrobeLight.xml</path>
+	<path>Aircraft/MD-10-Pack/Models/Refuel-Lights/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.344 </x-m>
       <y-m> -14.665 </y-m>
@@ -43,7 +43,7 @@
 	
 	<!-- Right wing -->
  <!--  <model> 
-    <path>Aircraft/MD-10/Models/Refuel-Lights/StrobeLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.344 </x-m>
       <y-m>  14.665 </y-m>
@@ -53,7 +53,7 @@
 
   <!-- Tail Refuel-Lights -->
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/TailLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/TailLight.xml</path>
     <!-- <offsets>
       <x-m>  9.791 </x-m>
       <y-m>  0.003 </y-m>
@@ -72,7 +72,7 @@
     <condition>
       <property>sim/model/config/light-cone</property>
     </condition>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/LandingLightL.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/LandingLightL.xml</path>
     <offsets>
       <x-m> -4.316 </x-m>
       <y-m> -5.594 </y-m>
@@ -85,7 +85,7 @@
     <condition>
       <not><property>sim/model/config/light-cone</property></not>
     </condition>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/LandingLightPlateL.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/LandingLightPlateL.xml</path>
     <offsets>
       <x-m> -4.606 </x-m>
       <y-m> -5.594 </y-m>
@@ -112,7 +112,7 @@
     <condition>
       <property>sim/model/config/light-cone</property>
     </condition>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/LandingLightR.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/LandingLightR.xml</path>
     <offsets>
       <x-m> -4.316 </x-m>
       <y-m>  5.594 </y-m>
@@ -125,7 +125,7 @@
     <condition>
       <not><property>sim/model/config/light-cone</property></not>
     </condition>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/LandingLightPlateR.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/LandingLightPlateR.xml</path>
     <offsets>
       <x-m> -4.606 </x-m>
       <y-m>  5.594 </y-m>
@@ -148,7 +148,7 @@
 
   <!-- Recognition Refuel-Lights 1 -->
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -2.698 </x-m>
       <y-m>  0.000 </y-m>
@@ -157,7 +157,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -0.598 </x-m>
       <y-m>  0.000 </y-m>
@@ -166,7 +166,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -1.498 </x-m>
       <y-m>  0.003 </y-m>
@@ -175,7 +175,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -2.698 </x-m>
       <y-m>  0.000 </y-m>
@@ -184,7 +184,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -0.598 </x-m>
       <y-m>  0.000 </y-m>
@@ -193,7 +193,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition1.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition1.xml</path>
     <offsets>
       <x-m> -1.498 </x-m>
       <y-m>  0.003 </y-m>
@@ -203,7 +203,7 @@
 
   <!-- Recognition Refuel-Lights 2 -->
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m> -1.783 </x-m>
       <y-m> 11.454 </y-m>
@@ -212,7 +212,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m>  -1.783 </x-m>
       <y-m> -11.454 </y-m>
@@ -221,7 +221,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m> -2.318 </x-m>
       <y-m>  8.463 </y-m>
@@ -230,7 +230,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m> -2.318 </x-m>
       <y-m> -8.463 </y-m>
@@ -239,7 +239,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m> -2.872 </x-m>
       <y-m>  5.084 </y-m>
@@ -248,7 +248,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition2.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition2.xml</path>
     <offsets>
       <x-m> -2.872 </x-m>
       <y-m> -5.084 </y-m>
@@ -258,7 +258,7 @@
 
   <!-- Recognition Refuel-Lights 3 -->
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m> -5.472 </x-m>
       <y-m>  1.376 </y-m>
@@ -267,7 +267,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m> -5.472 </x-m>
       <y-m> -1.376 </y-m>
@@ -276,7 +276,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m> -2.185 </x-m>
       <y-m>  1.430 </y-m>
@@ -285,7 +285,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m> -2.185 </x-m>
       <y-m> -1.430 </y-m>
@@ -294,7 +294,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m>  1.730 </x-m>
       <y-m>  1.424 </y-m>
@@ -303,7 +303,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/Recognition3.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/Recognition3.xml</path>
     <offsets>
       <x-m>  1.730 </x-m>
       <y-m> -1.424 </y-m>
@@ -313,7 +313,7 @@
 
   <!-- Formation Refuel-Lights -->
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/FormationLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/FormationLight.xml</path>
     <offsets>
       <x-m> -9.850 </x-m>
       <y-m>  0.000 </y-m>
@@ -322,7 +322,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/FormationLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/FormationLight.xml</path>
     <offsets>
       <x-m> -2.836 </x-m>
       <y-m>  0.000 </y-m>
@@ -331,7 +331,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/FormationLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/FormationLight.xml</path>
     <offsets>
       <x-m>  8.389 </x-m>
       <y-m> -0.101 </y-m>
@@ -340,7 +340,7 @@
   </model>
 
   <model>
-    <path>Aircraft/MD-10/Models/Refuel-Lights/FormationLight.xml</path>
+    <path>Aircraft/MD-10-Pack/Models/Refuel-Lights/FormationLight.xml</path>
     <offsets>
       <x-m>  8.389 </x-m>
       <y-m>  0.101 </y-m>
