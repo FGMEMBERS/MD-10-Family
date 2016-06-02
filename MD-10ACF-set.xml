@@ -8,7 +8,7 @@
 	<flight-model>yasim</flight-model>
 	<aero>MD-10ACF</aero>
 	<startup>
-	    <splash-texture>Aircraft/MD-10-Pack/splash.png</splash-texture>
+	    <splash-texture>Aircraft/MD-10-Family/splash.png</splash-texture>
         </startup>
 
 	<menubar>
@@ -20,7 +20,7 @@
 	</menubar>
 		
 	<model n="0">
-	    <path>Aircraft/MD-10-Pack/Models/MD-10ACF.xml</path>
+	    <path>Aircraft/MD-10-Family/Models/MD-10ACF.xml</path>
 	    <armrest type="double">0</armrest>
 	    <door>
 		<position-x-m type="float">-22.647</position-x-m>
@@ -71,7 +71,7 @@
     
     <nasal n="0">
         <MD11>
-            <file>Aircraft/MD-10-Pack/Nasal/liveries.nas</file>
+            <file>Aircraft/MD-10-Family/Nasal/liveries.nas</file>
         </MD11>
     </nasal>
 

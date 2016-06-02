@@ -758,7 +758,7 @@
 
 	<effect>
 		<name>Fuselage reflect</name>
-		<inherits-from>Aircraft/MD-10-Pack/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD10reflect</inherits-from>
 		<object-name>Fuselage</object-name>
 	</effect>
 	<!-- Rembrandt !! -->

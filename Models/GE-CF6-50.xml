@@ -14,7 +14,7 @@
 
 	<model>
 		<name>Fire</name>
-		<path>Aircraft/MD-10-Pack/Models/Effects/enginefire.xml</path>
+		<path>Aircraft/MD-10-Family/Models/Effects/enginefire.xml</path>
 		<condition>
 			<property alias="../../../params/on-fire" />
 		</condition>

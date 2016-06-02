@@ -9,7 +9,7 @@
 
 	<model>
 		<name>Engine</name>
-		<path>Aircraft/MD-10-Pack/Models/GE-CF6-50.xml</path>
+		<path>Aircraft/MD-10-Family/Models/GE-CF6-50.xml</path>
 		<overlay>
 			<params>
 				<on-fire>engines/engine[1]/on-fire</on-fire>
@@ -26,7 +26,7 @@
 
 	<model>
 		<name>Contrail</name>
-		<path>Aircraft/MD-10-Pack/Models/Effects/contrail.xml</path>
+		<path>Aircraft/MD-10-Family/Models/Effects/contrail.xml</path>
 		<overlay>
 			<params>
 				<n1>engines/engine[1]/rpm</n1>
@@ -83,12 +83,12 @@
 
 	<effect>
 		<name>Tail reflect</name>
-		<inherits-from>Aircraft/MD-10-Pack/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD10reflect</inherits-from>
 		<object-name>Vstab</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10-Pack/Models/Effects/MD10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD10chrome_reflect</inherits-from>
 		<object-name>EngineIntake</object-name>
 	</effect>
 

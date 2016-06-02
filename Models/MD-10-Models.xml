@@ -1,7 +1,7 @@
 <PropertyList>
 
 	<!-- <model>
-	<path>Aircraft/MD-10-Pack/Models/MD-10.xml</path>
+	<path>Aircraft/MD-10-Family/Models/MD-10.xml</path>
 		<offsets>
             <x-m>0</x-m>
             <y-m>0</y-m>
@@ -15,7 +15,7 @@
 
 	<model>
 	<name>shadowOSG</name>
-	<path>Aircraft/MD-10-Pack/Models/shadow.xml</path>
+	<path>Aircraft/MD-10-Family/Models/shadow.xml</path>
 		<offsets>
 			<x-m> 0.0</x-m>
 			<y-m> 0.0</y-m>
@@ -39,7 +39,7 @@
 
 	<model>
 	<name>Followme</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Followme/followme.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Followme/followme.xml</path>
 		<condition>
 			<equals>
 				<property>controls/switches/followme</property>
@@ -59,7 +59,7 @@
 
 	<model>
 	<name>Catering Vehicle</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Catering/catering.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Catering/catering.xml</path>
 		<condition>
 			<equals>
 				<property>controls/switches/catering</property>
@@ -83,7 +83,7 @@
 
 	<!-- <model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -99,7 +99,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -115,7 +115,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -131,7 +131,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -147,7 +147,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -163,7 +163,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -183,7 +183,7 @@
 
 	<!-- <model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -199,7 +199,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -215,7 +215,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -231,7 +231,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -247,7 +247,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -263,7 +263,7 @@
 
 	<model>
 	<name>Cone</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Cones/cone.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Cones/cone.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/cones</property>
@@ -282,7 +282,7 @@
 
 	<model>
 	<name>Stairwayfront</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Stairways/stairs.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Stairways/stairs.xml</path>
 		<condition>
 		<equals>
 			             <property>controls/switches/stairs1</property>
@@ -303,7 +303,7 @@
 
 	<model>
 	<name>Stairwayback</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Stairways/stairs.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Stairways/stairs.xml</path>
 		<condition>
 		<equals>
 			             <property>controls/switches/stairs2</property>
@@ -325,7 +325,7 @@
 
 	<model>
 	<name>Fuel Truck</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Fuel/citerne.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Fuel/citerne.xml</path>
 		<condition>
 		<equals>
 			             <property>controls/switches/fuel</property>
@@ -346,7 +346,7 @@
 
 	<model>
 	<name>Bus</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Bus/bus.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Bus/bus.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/bus</property>
@@ -368,7 +368,7 @@
 
 	<model>
 	<name>GPU truck long</name>
-	<path>Aircraft/MD-10-Pack/Models/Operations/Baggage/chariot.xml</path>
+	<path>Aircraft/MD-10-Family/Models/Operations/Baggage/chariot.xml</path>
 		<condition>
 		<and>
 			<property>controls/switches/gpu</property>
