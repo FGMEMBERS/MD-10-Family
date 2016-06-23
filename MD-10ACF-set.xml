@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 
 <PropertyList include="MD-10ACF-main.xml">
@@ -8,7 +8,8 @@
 	<flight-model>yasim</flight-model>
 	<aero>MD-10ACF</aero>
 	<startup>
-	    <splash-texture>Aircraft/MD-10-Family/splash.png</splash-texture>
+	    <splash-texture>Aircraft/MD-10-Family/Splash/MD-10-splash1.png</splash-texture>
+	    <splash-texture>Aircraft/MD-10-Family/Splash/MD-10-splash2.png</splash-texture>
         </startup>
 
 	<menubar>
