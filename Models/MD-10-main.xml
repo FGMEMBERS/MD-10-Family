@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Main model, all variants -->
 
 <PropertyList>
@@ -11,7 +11,7 @@
 
 			# MP props
 			var vals = model.getNode("sim/multiplay/generic");
-			var props_file = io.read_properties("Aircraft/MD-10-Family/Systems/MD-10-multiplayer.xml");
+			var props_file = io.read_properties("Aircraft/MD-10-Family/Systems/MD-10multiplayer.xml");
 			foreach (var ref; props_file.getChildren("reference"))
 			{
 				var val = vals.getChild(ref.getNode("type").getValue(), ref.getNode("index").getValue(), 1);

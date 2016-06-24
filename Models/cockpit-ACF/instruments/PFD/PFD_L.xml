@@ -7,6 +7,16 @@ Syd Adams
 
  <path>PFD_L.ac</path>
 
+    <animation>
+        <type>select</type>
+        <object-name>Off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
 
     <animation>
         <type>select</type>
@@ -565,28 +575,6 @@ Syd Adams
         </axis>
     </animation-->
 
-
-    <animation>
-        <type>rotate</type>
-        <object-name>hdg-bug</object-name>
-        <property>autopilot/internal/heading-bug-error-deg</property>
-        <interpolation>
-            <entry><ind>-35</ind><dep>-35</dep></entry>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>35</ind><dep>35</dep></entry>
-        </interpolation>
-        <center>
-            <x-m>0.002</x-m>
-            <y-m>-0.012</y-m>
-            <z-m>-0.165</z-m>
-        </center>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
     <animation>
         <type>rotate</type>
         <object-name>Roll.needle</object-name>
@@ -633,21 +621,6 @@ Syd Adams
                 <z>-1</z>
             </axis>
         </transform>
-    </animation>
-
-    <animation>
-        <type>texrotate</type>
-        <object-name>Hsi</object-name>
-        <property>instrumentation/heading-indicator/indicated-heading-deg</property>
-        <center>
-            <x>0.75</x>
-            <y>0.75</y>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>-1</z>
-        </axis>
     </animation>
     
     <animation>
@@ -1423,45 +1396,6 @@ Syd Adams
 		<object-name>Asitext.001</object-name>
 		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<factor>0.1</factor>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>textranslate</type>
-		<object-name>Hdgtext.100</object-name>
-		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
-		<factor>0.001</factor>
-		<step>100</step>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Hdgtext.10</object-name>
-		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
-		<factor>0.01</factor>
-		<step>10</step>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>textranslate</type>
-		<object-name>Hdgtext.1</object-name>
-		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
-		<factor>0.1</factor>
-		<step>1</step>
 		<axis>
 			<x>0</x>
 			<y>1</y>

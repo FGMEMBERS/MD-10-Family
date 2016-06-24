@@ -2,13 +2,23 @@
 <PropertyList>
 
  <path>EAD_1_GE.ac</path>
+ 
+    <animation>
+        <type>select</type>
+        <object-name>Power.off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
 
 			<animation>
 		<type>select</type>
 		<object-name>n1.1</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
-		<object-name>EPR_1</object-name>
 		<object-name>N1_1</object-name>
 		<object-name>EGT_1</object-name>
 		<object-name>N2_1</object-name>
@@ -68,7 +78,7 @@
     <property>engines/engine[0]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>1450</ind><dep>180</dep></entry>
+<entry><ind>950</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -107,7 +117,6 @@
 		<object-name>n1.2</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
-		<object-name>EPR_2</object-name>
 		<object-name>N1_2</object-name>
 		<object-name>EGT_2</object-name>
 		<object-name>N2_2</object-name>
@@ -167,7 +176,7 @@
     <property>engines/engine[1]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>1450</ind><dep>180</dep></entry>
+<entry><ind>950</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m></x-m>
@@ -206,7 +215,6 @@
 		<object-name>n1.3</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
-		<object-name>EPR_3</object-name>
 		<object-name>N1_3</object-name>
 		<object-name>EGT_3</object-name>
 		<object-name>N2_3</object-name>
@@ -266,7 +274,7 @@
     <property>engines/engine[2]/egt</property>
 <interpolation>
 <entry><ind>1</ind><dep>0</dep></entry>
-<entry><ind>1450</ind><dep>180</dep></entry>
+<entry><ind>950</ind><dep>180</dep></entry>
 </interpolation>
     <center>
       <x-m>0</x-m>
@@ -951,7 +959,6 @@
 	
 	    <animation>
         <type>material</type><!--white-->
-        <object-name>EPR</object-name>
         <object-name>EGT</object-name>
         <object-name>N1</object-name>
         <object-name>N2_1</object-name>
@@ -963,9 +970,6 @@
         <object-name>N1_1</object-name>
         <object-name>N1_2</object-name>
         <object-name>N1_3</object-name>
-        <object-name>EPR_1</object-name>
-        <object-name>EPR_2</object-name>
-        <object-name>EPR_3</object-name>
         <object-name>N2</object-name>
         <object-name>temperature</object-name>
         <emission>

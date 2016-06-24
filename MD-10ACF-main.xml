@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 
 <PropertyList>
 
@@ -10,7 +10,7 @@
         <rating>
             <FDM type="int">3</FDM>
             <systems type="int">4</systems>
-            <cockpit type="int">3</cockpit>
+            <cockpit type="int">2</cockpit>
             <model type="int">5</model>
         </rating>
 	<shutterspeed type="double">0.18</shutterspeed>
@@ -40,7 +40,7 @@
 		<limits>
 		    <enabled archive="y" type="bool">false</enabled>
 		</limits>
-		<x-offset-m archive="y">-0.54</x-offset-m>
+		<x-offset-m archive="y">-0.595</x-offset-m>
 		<y-offset-m archive="y">6.11</y-offset-m>
 		<z-offset-m archive="y">-25.15</z-offset-m>
 		<default-field-of-view-deg type="double">80</default-field-of-view-deg>
@@ -137,13 +137,6 @@
                         <binding>
                             <command>nasal</command>
                             <script>dialogs.tiller_steering.open()</script>
-                        </binding>
-                    </item>
-                    <item>
-                        <label>Show/Hide Yokes</label>
-                        <binding>
-                            <command>property-toggle</command>
-                            <property>sim/yokes-visible</property>
                         </binding>
                     </item>
                 </menu>

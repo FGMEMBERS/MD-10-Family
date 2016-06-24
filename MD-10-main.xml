@@ -5,7 +5,7 @@
 <PropertyList>
 
     <sim>
-	<author>Joshua Davidson (it0uchpods/411), David Waggoner (Skyboat)</author>
+	<author>Joshua Davidson (it0uchpods/411)</author>
 	<status>beta</status>
         <rating>
             <FDM type="int">3</FDM>
@@ -137,13 +137,6 @@
                         <binding>
                             <command>nasal</command>
                             <script>dialogs.tiller_steering.open()</script>
-                        </binding>
-                    </item>
-                    <item>
-                        <label>Show/Hide Yokes</label>
-                        <binding>
-                            <command>property-toggle</command>
-                            <property>sim/yokes-visible</property>
                         </binding>
                     </item>
                 </menu>

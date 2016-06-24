@@ -36,7 +36,7 @@
 	    </door>
 	    <livery>
 		<file type="string">WHT</file>
-      	    </livery>
+      	</livery>
 	</model>
 	<shutterspeed type="double">0.18</shutterspeed>
 		
@@ -71,7 +71,7 @@
     
     <nasal n="0">
         <MD11>
-            <file>Aircraft/MD-10-Family/Nasal/liveries.nas</file>
+            <file>Aircraft/MD-10-Family/Nasal/liveriesACF.nas</file>
         </MD11>
     </nasal>
 

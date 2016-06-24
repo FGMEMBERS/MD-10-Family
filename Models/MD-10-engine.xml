@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- McDonnell Douglas MD-10 -->
+<!-- McDonnell Douglas MD-10-Family -->
 <!-- Wing engine model -->
 
 <PropertyList>
@@ -69,12 +69,12 @@
 
 	<effect>
 		<name>Nacelle reflect</name>
-		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD10reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD11reflect</inherits-from>
 		<object-name>Nacelle</object-name>
 	</effect>
 	<effect>
 		<name>Intake reflect</name>
-		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD10chrome_reflect</inherits-from>
+		<inherits-from>Aircraft/MD-10-Family/Models/Effects/MD11chrome_reflect</inherits-from>
 		<object-name>Intake</object-name>
 		<object-name>Nozzle</object-name>
 	</effect>

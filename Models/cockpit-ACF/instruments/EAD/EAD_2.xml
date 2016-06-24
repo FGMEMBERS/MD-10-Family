@@ -2,6 +2,17 @@
 <PropertyList>
 
  <path>EAD_2.ac</path>
+ 
+    <animation>
+        <type>select</type>
+        <object-name>Power.off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
 
 		<animation>
 		<type>textranslate</type>
