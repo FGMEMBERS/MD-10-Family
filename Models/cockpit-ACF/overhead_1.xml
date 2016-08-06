@@ -86,7 +86,7 @@
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>controls/lighting/instruments-norm</property>
+				<property>controls/lighting/pedestal-panel-norm</property>
 				<step>0.025</step>
 				<max>1</max>
 			</binding>
@@ -97,7 +97,7 @@
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>controls/lighting/instruments-norm</property>
+				<property>controls/lighting/pedestal-panel-norm</property>
 				<step>-0.025</step>
 				<min>0</min>
 			</binding>
@@ -160,7 +160,7 @@
 		<type>rotate</type>
 		<object-name>dashboard.text.knob</object-name>
     <object-name>dashboard.text.indicator</object-name>
-				<property>controls/lighting/instruments-norm</property>
+				<property>controls/lighting/pedestal-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>-329</dep></entry>
@@ -199,6 +199,8 @@
 		</center>
 	</animation>
 
+
+<!-- FUEL -->
 			<animation>
 		<type>select</type>
 		<object-name>ltank.1</object-name>
@@ -1083,12 +1085,316 @@ FSC.btn
 		    <z>0</z>
 		</axis>
 	</animation>
+
+<!-- HYDRAULICS -->
+	<!-- Hydraulic System Control Button -->
+	<animation>
+		<type>pick</type>
+		<object-name>HSC.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/hydraulic/auto-mode</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HSC.btn</object-name>
+		<property>controls/hydraulic/auto-mode</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Aux Pumps -->
+	<animation>
+		<type>pick</type>
+		<object-name>AUXhyd1.btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/aux-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>AUXhyd1.btn</object-name>
+		<property>controls/hydraulic/aux-pump</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		
+	<animation>
+		<type>pick</type>
+		<object-name>AUXhyd2.btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/aux-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>AUXhyd2.btn</object-name>
+		<property>controls/hydraulic/aux-pump[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Engine Driven Pumps -->
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
 	
-    <!--animation>
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump[1]</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump[1]</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump[2]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump[2]</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump[2]</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low[2]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- RMPs -->
+	<animation>
+		<type>pick</type>
+		<object-name>HydRMP.13</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/electric-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydRMP.13</object-name>
+		<property>systems/hydraulic/rmp</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		
+	<animation>
+		<type>pick</type>
+		<object-name>HydRMP.23</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/electric-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydRMP.23</object-name>
+		<property>systems/hydraulic/rmp[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Low Pressure Indicators -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.1</object-name>
+		<property>systems/hydraulic/system-fault</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.2</object-name>
+		<property>systems/hydraulic/system-fault[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.3</object-name>
+		<property>systems/hydraulic/system-fault[2]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+    <animation>
         <type>rotate</type>
-        <object-name>apuknob</object-name>
-        <object-name>apuknob.light</object-name>
-        <property>controls/APU/off-start-run</property>
+        <object-name>emgpwrknob</object-name>
+        <object-name>emgpwr.light</object-name>
+        <property>controls/switches/emgpwr</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1117,14 +1423,14 @@ FSC.btn
     
     <animation>
         <type>pick</type>
-        <object-name>apuknob</object-name>
+        <object-name>emgpwrknob</object-name>
         <action>
             <button>0</button>
             <button>3</button>
            <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/APU/off-start-run</property>
+                <property>controls/switches/emgpwr</property>
                 <step>1</step>
                 <min>0</min>
                 <max>2</max>
@@ -1136,13 +1442,13 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/APU/off-start-run</property>
+                <property>controls/switches/emgpwr</property>
                 <step>-1</step>
                 <min>0</min>
                 <max>2</max>
             </binding>
         </action>
-    </animation-->
+    </animation>
     
     <animation>
         <type>rotate</type>
@@ -1250,8 +1556,10 @@ FSC.btn
 			<button>3</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
-				<command>property-toggle</command>
-				<property>controls/lighting/panel-lights</property>
+				<command>property-adjust</command>
+				<property>controls/lighting/dashboard-panel-norm</property>
+				<step>0.025</step>
+				<max>1.0</max>
 			</binding>
 		</action>
 		<action>
@@ -1259,8 +1567,10 @@ FSC.btn
 			<button>4</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
-				<command>property-toggle</command>
-				<property>controls/lighting/panel-lights</property>
+				<command>property-adjust</command>
+				<property>controls/lighting/dashboard-panel-norm</property>
+				<step>-0.025</step>
+				<min>0</min>
 			</binding>
 		</action>
 	</animation>
@@ -1270,7 +1580,7 @@ FSC.btn
 		<type>rotate</type>
 		<object-name>dashboard.light</object-name>
     <object-name>dashboard.light.indicator</object-name>
-    <property>controls/lighting/panel-lights</property>
+    <property>controls/lighting/dashboard-panel-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1.0</ind><dep>-280</dep></entry>
@@ -1308,7 +1618,10 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/electric/battery-switch</property>
             </binding>
-
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
     </animation>
     
@@ -1322,6 +1635,10 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/lighting/beacon</property>
             </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
     </animation>
     
@@ -1329,6 +1646,12 @@ FSC.btn
    <type>textranslate</type>
    <object-name>BCN.btn</object-name>
         <property>controls/lighting/beacon</property>
+        <condition>
+	    <equals>
+		<property>systems/electrical/outputs/avionics</property>
+		<value>1</value>
+	    </equals>
+	</condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1356,7 +1679,10 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/lighting/nav-lights</property>
             </binding>
-
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
     </animation>
     
@@ -1364,6 +1690,12 @@ FSC.btn
    <type>textranslate</type>
    <object-name>NAV.btn</object-name>
    <property>controls/lighting/nav-lights</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1381,7 +1713,7 @@ FSC.btn
    </axis>
  </animation>
 
-    <!--animation>
+    <animation>
         <type>pick</type>
         <object-name>LOGO.btn</object-name>
         <action>
@@ -1391,9 +1723,12 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/lighting/logo-lights</property>
             </binding>
-
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
-    </animation-->
+    </animation>
     
      <animation>
    <type>textranslate</type>
@@ -1422,7 +1757,7 @@ FSC.btn
    </axis>
  </animation>
  
-         <!--animation>
+         <animation>
         <type>pick</type>
         <object-name>turnoff.left</object-name>
         <object-name>turnoff.right</object-name>
@@ -1433,9 +1768,12 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/lighting/turn-off-lights</property>
             </binding>
-
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
-    </animation-->
+    </animation>
     
      <animation>
    <type>textranslate</type>
@@ -1476,7 +1814,10 @@ FSC.btn
                 <command>property-toggle</command>
                 <property>controls/lighting/strobe</property>
             </binding>
-
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(2);</script>
+            </binding>
         </action>
     </animation>
     
@@ -1484,6 +1825,12 @@ FSC.btn
    <type>textranslate</type>
       <object-name>STRB.toggle</object-name>
         <property>controls/lighting/strobe</property>
+        <condition>
+        <equals>
+        <property>systems/electrical/outputs/avionics</property>
+        <value>1</value>
+        </equals>
+        </condition>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1554,7 +1901,11 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/landing-light-port</property>
+                <property>controls/lighting/landing-light</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(1);</script>
             </binding>
         </action>
     </animation>
@@ -1562,7 +1913,7 @@ FSC.btn
 	<animation>
         <type>rotate</type>
         <object-name>L-Lnd.toggle</object-name>
-        <property>controls/lighting/landing-light-port</property>
+        <property>controls/lighting/landing-light</property>
         <factor>30</factor>
         <center>
             <x-m>-21.7985</x-m>
@@ -1584,7 +1935,11 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/landing-light-stbd</property>
+                <property>controls/lighting/landing-light[2]</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(1);</script>
             </binding>
         </action>
     </animation>
@@ -1592,7 +1947,7 @@ FSC.btn
 	<animation>
         <type>rotate</type>
         <object-name>R-Lnd.toggle</object-name>
-        <property>controls/lighting/landing-light-stbd</property>
+        <property>controls/lighting/landing-light[2]</property>
         <factor>30</factor>
         <center>
             <x-m>-21.7985</x-m>
@@ -1614,7 +1969,11 @@ FSC.btn
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>controls/lighting/landing-light-nose[1]</property>
+                <property>controls/lighting/landing-light[1]</property>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>controls.click(1);</script>
             </binding>
         </action>
     </animation>
@@ -1622,7 +1981,7 @@ FSC.btn
 	<animation>
         <type>rotate</type>
         <object-name>C-Lnd.toggle</object-name>
-        <property>controls/lighting/landing-light-nose[1]</property>
+        <property>controls/lighting/landing-light[1]</property>
         <factor>30</factor>
         <center>
             <x-m>-21.7985</x-m>
