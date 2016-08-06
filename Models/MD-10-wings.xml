@@ -30,7 +30,7 @@
         <property>surface-positions/flap-pos-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.31</ind><dep>14.5</dep></entry>
+			<entry><ind>0.31</ind><dep>12.5</dep></entry>
 			<entry><ind>0.35</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
@@ -65,7 +65,7 @@
         <property>surface-positions/flap-pos-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.31</ind><dep>14.5</dep></entry>
+			<entry><ind>0.31</ind><dep>12.5</dep></entry>
 			<entry><ind>0.35</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
@@ -100,7 +100,7 @@
         <property>surface-positions/flap-pos-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.31</ind><dep>14.5</dep></entry>
+			<entry><ind>0.31</ind><dep>12.5</dep></entry>
 			<entry><ind>0.35</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
@@ -135,7 +135,7 @@
         <property>surface-positions/flap-pos-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.31</ind><dep>14.5</dep></entry>
+			<entry><ind>0.31</ind><dep>12.5</dep></entry>
 			<entry><ind>0.35</ind><dep>0</dep></entry>
 		</interpolation>
 		<axis>
@@ -400,6 +400,110 @@
 			<x2-m>-0.099</x2-m>
 			<y2-m>8.798</y2-m>
 			<z2-m>4.662</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- Spoilerons -->
+	<animation>
+		<name>Left inner spoiler</name>
+		<type>rotate</type>
+		<object-name>SpoilerL1</object-name>
+		<property>surface-positions/left-aileron-inner-pos-norm</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>-1.0</ind>
+	                <dep>20</dep>
+	            </entry>
+	        </interpolation>
+		<axis>
+			<x1-m>3.721</x1-m>
+			<y1-m>-4.024</y1-m>
+			<z1-m>3.598</z1-m>
+			<x2-m>4.093</x2-m>
+			<y2-m>-7.011</y2-m>
+			<z2-m>3.995</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Left outer spoilers</name>
+		<type>rotate</type>
+		<object-name>SpoilerL2</object-name>
+		<object-name>SpoilerL3</object-name>
+		<object-name>SpoilerL4</object-name>
+		<object-name>SpoilerL5</object-name>
+		<property>surface-positions/left-aileron-outer-pos-norm</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>-1.0</ind>
+	                <dep>20</dep>
+	            </entry>
+	        </interpolation>
+		<axis>
+			<x1-m>5.109</x1-m>
+			<y1-m>-10.288</y1-m>
+			<z1-m>4.335</z1-m>
+			<x2-m>8.644</x2-m>
+			<y2-m>-16.798</y2-m>
+			<z2-m>4.876</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right inner spoiler</name>
+		<type>rotate</type>
+		<object-name>SpoilerR1</object-name>
+		<property>surface-positions/right-aileron-inner-pos-norm</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>-1.0</ind>
+	                <dep>20</dep>
+	            </entry>
+	        </interpolation>
+		<axis>
+			<x1-m>4.093</x1-m>
+			<y1-m>7.011</y1-m>
+			<z1-m>3.995</z1-m>
+			<x2-m>3.721</x2-m>
+			<y2-m>4.024</y2-m>
+			<z2-m>3.598</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Right outer spoilers</name>
+		<type>rotate</type>
+		<object-name>SpoilerR2</object-name>
+		<object-name>SpoilerR3</object-name>
+		<object-name>SpoilerR4</object-name>
+		<object-name>SpoilerR5</object-name>
+		<property>surface-positions/right-aileron-outer-pos-norm</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>-1.0</ind>
+	                <dep>20</dep>
+	            </entry>
+	        </interpolation>
+		<axis>
+			<x1-m>8.644</x1-m>
+			<y1-m>16.798</y1-m>
+			<z1-m>4.876</z1-m>
+			<x2-m>5.109</x2-m>
+			<y2-m>10.288</y2-m>
+			<z2-m>4.335</z2-m>
 		</axis>
 	</animation>
 
