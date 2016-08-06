@@ -47,6 +47,21 @@
 	    </config>
 	</view>
 	<view n="100">
+	    <name>Wing View</name>
+	    <type>lookfrom</type>
+	    <enabled type="bool">true</enabled>
+	    <internal type="bool" archive="y">true</internal>
+	    <config>
+		<from-model type="bool">true</from-model>
+		<x-offset-m archive="y">3.53</x-offset-m>
+		<y-offset-m archive="y">6.11</y-offset-m>
+		<z-offset-m archive="y">5.95</z-offset-m>
+		<default-field-of-view-deg type="double">97.4</default-field-of-view-deg>
+		<heading-offset-deg archive="y">250</heading-offset-deg>
+		<pitch-offset-deg archive="y">-5</pitch-offset-deg>
+	    </config>
+	</view>
+	<view n="101">
 	    <name>First Officer View</name>
 	    <type>lookfrom</type>
 	    <enabled type="bool">true</enabled>
@@ -59,7 +74,7 @@
 		<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
 	    </config>
 	</view>
-	<!--view n="101">
+	<!--view n="102">
 	    <name>Overhead Panel</name>
 	    <type>lookfrom</type>
 	    <enabled type="bool">true</enabled>
@@ -211,6 +226,9 @@
             <autopilot>
                 <path>Aircraft/MD-10-Family/Systems/MD11-autoland.xml</path>
             </autopilot>
+	    <autopilot>
+		<path>Aircraft/MD-10-Family/Systems/MD11-flt-ctrls.xml</path>
+	    </autopilot>
             <!--autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/MD-10-Family/Systems/MD11-autobrake.xml</path>
@@ -800,7 +818,6 @@
             <file>Aircraft/MD-10-Family/Nasal/AFDS.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/electrical.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/engine.nas</file>
-            <file>Aircraft/MD-10-Family/Nasal/Hydraulics.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/systems.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/tyresmoke.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/gpws.nas</file>
@@ -816,6 +833,9 @@
 			<file>Aircraft/MD-10-Family/Nasal/speedbrakes.nas</file>
 			<file>Aircraft/MD-10-Family/Nasal/autobrakes.nas</file>
         </MD11>
+	<hydraulics>
+            <file>Aircraft/MD-10-Family/Nasal/hydraulic.nas</file>
+	</hydraulics>
         <dialogs>
             <file>Aircraft/MD-10-Family/Nasal/dialogs.nas</file>
         </dialogs>

@@ -67,22 +67,20 @@ var spoilers = {
     },
 
     autospeedbrake : func {
-#	if (me.auto.getBoolValue() and getprop("gear/gear[1]/wow") and me.hydraulic.getBoolValue()) {
+#	if (me.auto.getBoolValue() and getprop("gear/gear[2]/wow") and me.hydraulic.getBoolValue()) {
 	var throt = getprop("controls/engines/engine[0]/throttle-act") < 0.4 and
 		    getprop("controls/engines/engine[1]/throttle-act") < 0.4 and
 		    getprop("controls/engines/engine[2]/throttle-act") < 0.4;
 	var revrs = getprop("controls/engines/engine[0]/reverser") and
 		    getprop("controls/engines/engine[1]/reverser") and
 		    getprop("controls/engines/engine[2]/reverser");
-	if (me.auto.getBoolValue() and (getprop("gear/gear[1]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow") or getprop("gear/gear[2]/wow")) and throt) {
+	if (me.auto.getBoolValue() and (getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow") or getprop("gear/gear[3]/wow") or getprop("gear/gear[4]/wow")) and throt) {
 	    me.pos_cmd.setValue(0.750);
 	    setprop("controls/flight/speedbrake-lever", 3);
 		var spdbrkpos = getprop("controls/flight/speedbrake-lever");
-		if (spdbrkpos == 3) {
-			if (getprop("gear/gear[0]/wow")) {
+		if (getprop("gear/gear[0]/wow")) {
 			me.pos_cmd.setValue(1.0);
 			setprop("controls/flight/speedbrake-lever", 4);
-			}
 		}
 	}
     },

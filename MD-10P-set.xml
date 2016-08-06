@@ -6,10 +6,10 @@
     <sim>
 	<description>Boeing/McDonnell Douglas MD-10P</description>
 	<flight-model>yasim</flight-model>
-	<aero>MD-10F</aero>
+	<aero>MD-10P</aero>
 	<startup>
 	    <splash-texture>Aircraft/MD-10-Family/Splash/MD-10-splash1.png</splash-texture>
-	    <splash-texture>Aircraft/MD-10-Family/Splash/MD-10-splash2.png</splash-texture>
+	    <!--splash-texture>Aircraft/MD-10-Family/Splash/MD-10-splash2.png</splash-texture-->
         </startup>
 
 	<menubar>

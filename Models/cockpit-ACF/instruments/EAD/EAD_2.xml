@@ -4,6 +4,13 @@
  <path>EAD_2.ac</path>
  
     <animation>
+    <type>scale</type>
+    <x-offset>1.1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+    </animation>
+ 
+    <animation>
         <type>select</type>
         <object-name>Power.off</object-name>
         <condition>
@@ -17,7 +24,7 @@
 		<animation>
 		<type>textranslate</type>
 		<object-name>elevator.right.up</object-name>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<interpolation>
 			<entry><ind>-1.0</ind><dep>0.5</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -32,7 +39,7 @@
 			<animation>
 		<type>textranslate</type>
 		<object-name>elevator.right.down</object-name>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<interpolation>
 			<entry><ind>1.0</ind><dep>0.5</dep></entry>
 			<entry><ind>0.0</ind><dep>0.0</dep></entry>
@@ -49,7 +56,7 @@
 		<object-name>elevator.right.down</object-name>
 		<condition>
 		<less-than>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<value>0.99</value>
 		</less-than>
 		</condition>
@@ -60,7 +67,7 @@
 		<object-name>elevator.right.down.green</object-name>
 		<condition>
 		<greater-than>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<value>0.99</value>
 		</greater-than>
 		</condition>
@@ -71,7 +78,7 @@
 		<object-name>elevator.right.up</object-name>
 		<condition>
 		<greater-than>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<value>-0.99</value>
 		</greater-than>	
 		</condition>
@@ -82,7 +89,7 @@
 		<object-name>elevator.right.up.green</object-name>
 		<condition>
 		<less-than>
-		<property>/controls/flight/elevator</property>
+		<property>/controls/flight/elevator-pos</property>
 		<value>-0.99</value>
 		</less-than>
 		</condition>

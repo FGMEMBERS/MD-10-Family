@@ -8,8 +8,15 @@ Syd Adams
  <path>PFD_L.ac</path>
 
     <animation>
+    <type>scale</type>
+    <x-offset>1.1</x-offset>
+    <y-offset>1.1</y-offset>
+    <z-offset>1.1</z-offset>
+    </animation>
+ 
+    <animation>
         <type>select</type>
-        <object-name>Off</object-name>
+        <object-name>Power.off</object-name>
         <condition>
             <less-than>
                 <property>systems/electrical/outputs/efis</property>
@@ -107,6 +114,10 @@ Syd Adams
 		</equals>
 		<equals>
 		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
+		<value>FPA</value>
+		</equals>
+		<equals>
+		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
 		<value>G/S</value>
 		</equals>
 		<equals>
@@ -192,6 +203,10 @@ Syd Adams
 		</equals>
 		<equals>
 		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
+		<value>FPA</value>
+		</equals>
+		<equals>
+		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
 		<value>G/S</value>
 		</equals>
 		<equals>
@@ -228,6 +243,10 @@ Syd Adams
 		<equals>
 		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
 		<value>V/S</value>
+		</equals>
+		<equals>
+		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
+		<value>FPA</value>
 		</equals>
 		<equals>
 		<property>instrumentation/afds/ap-modes/pitch-mode</property>		
@@ -575,6 +594,28 @@ Syd Adams
         </axis>
     </animation-->
 
+
+    <animation>
+        <type>rotate</type>
+        <object-name>hdg-bug</object-name>
+        <property>autopilot/internal/heading-bug-error-deg</property>
+        <interpolation>
+            <entry><ind>-35</ind><dep>-35</dep></entry>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>35</ind><dep>35</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0.002</x-m>
+            <y-m>-0.012</y-m>
+            <z-m>-0.165</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
     <animation>
         <type>rotate</type>
         <object-name>Roll.needle</object-name>
@@ -621,6 +662,21 @@ Syd Adams
                 <z>-1</z>
             </axis>
         </transform>
+    </animation>
+
+    <animation>
+        <type>texrotate</type>
+        <object-name>Hsi</object-name>
+        <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+        <center>
+            <x>0.75</x>
+            <y>0.75</y>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
     </animation>
     
     <animation>
@@ -1172,7 +1228,7 @@ Syd Adams
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
-        <format type="string">QNH %2.2f</format>
+        <format type="string">INHG %2.2f</format>
         <property>instrumentation/altimeter/setting-inhg</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
@@ -1182,139 +1238,21 @@ Syd Adams
             <height type="int">32</height>
         </font-resolution>
     </text>
-    <text>
-        <name>INHG-YEL</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">%2.2f IN</format>
-        <property>instrumentation/altimeter/setting-inhg</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>INHG-STD</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">literal</type>
-        <text>STD</text>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>INHG-STD-YEL</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">literal</type>
-        <text>STD</text>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>INHG-WHT</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.068</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">%2.2f IN</format>
-        <property>instrumentation/efis/inhg-previos</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.007</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-
+	
     <text>
         <name>HPA</name>
         <offsets>
             <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
+            <y-m>0.0641</y-m>
+            <z-m>-0.0518</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
-        <format type="string">%4.0f HPA</format>
-        <property>instrumentation/efis/inhg-kpa</property>
+        <format type="string">HPA %4.0f</format>
+        <property>instrumentation/altimeter/setting-hpa</property>
         <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>HPA-YEL</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.061</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">%4.0f HPA</format>
-        <property>instrumentation/efis/inhg-kpa</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
-        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">32</width>
-            <height type="int">32</height>
-        </font-resolution>
-    </text>
-    <text>
-        <name>HPA-WHT</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.058</y-m>
-            <z-m>-0.068</z-m>
-        </offsets>
-        <alignment>center-center</alignment>
-        <axis-alignment>yz-plane</axis-alignment>
-        <type type="string">number-value</type>
-        <format type="string">%4.0f HPA</format>
-        <property>instrumentation/efis/inhg-kpa-previous</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.008</character-size>
+        <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
         <font-resolution>
             <width type="int">32</width>
@@ -1396,6 +1334,45 @@ Syd Adams
 		<object-name>Asitext.001</object-name>
 		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>textranslate</type>
+		<object-name>Hdgtext.100</object-name>
+		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Hdgtext.10</object-name>
+		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Hdgtext.1</object-name>
+		<property>instrumentation/heading-indicator/indicated-heading-deg</property>
+		<factor>0.1</factor>
+		<step>1</step>
 		<axis>
 			<x>0</x>
 			<y>1</y>
@@ -1571,9 +1548,6 @@ Syd Adams
 
     <animation>
         <type>material</type><!--green-->
-        <object-name>PITCH</object-name>
-        <object-name>INHG-STD</object-name>
-        <object-name>HPA</object-name>
         <object-name>TRU-annun</object-name>
         <object-name>mins</object-name>
         <object-name>vref-text</object-name>
@@ -1609,6 +1583,8 @@ Syd Adams
 
     <animation>
         <type>material</type><!--white-->
+        <object-name>atofft</object-name>
+        <object-name>apofft</object-name>
         <object-name>MACH</object-name>
         <object-name>ASIdigits</object-name>
         <object-name>ALTdigits</object-name>
@@ -1617,22 +1593,27 @@ Syd Adams
         <!--object-name>VS-POS</object-name>
         <object-name>VS-NEG</object-name-->
         <object-name>BARO-source</object-name>
-        <object-name>INHG-WHT</object-name>
-        <object-name>HPA-WHT</object-name>
+        <object-name>Slat</object-name>
+        <object-name>Flap15</object-name>
+        <object-name>Flap28</object-name>
+        <object-name>Flap35</object-name>
+        <object-name>Flap50</object-name>
+        <object-name>INHG</object-name>
+        <object-name>HPA</object-name>
         <object-name>ASI-taxi</object-name>
         <object-name>MAG-annun</object-name>
         <object-name>HDG-annun</object-name>
         <object-name>IAS-annun</object-name>
         <object-name>SPD-THRUST</object-name>
         <object-name>SPD-PITCH</object-name>
+        <object-name>PITCH</object-name>
         <object-name>ROLL</object-name>
         <object-name>MACH-annun</object-name>
-        <object-name>INHG</object-name>
         <object-name>min-mode</object-name>
         <emission>
-            <red>0.7</red>
-            <green>0.7</green>
-            <blue>0.7</blue>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
         </emission>
         <ambient>
             <red>0</red>
@@ -1706,9 +1687,6 @@ Syd Adams
 
     <animation>
         <type>material</type><!--yellow-->
-        <object-name>INHG-STD-YEL</object-name>
-        <object-name>INHG-YEL</object-name>
-        <object-name>HPA-YEL</object-name>
         <object-name>dec-hgt</object-name>
         <emission>
             <red>0.9</red>
@@ -1759,36 +1737,9 @@ Syd Adams
         <type>select</type>
         <object-name>INHG</object-name>
         <condition>
-            <and>
                 <not>
                     <property>instrumentation/efis/inputs/kpa-mode</property>
                 </not>
-                <not>
-                    <property>instrumentation/inputs/setting-std</property>
-                </not>
-                <less-than-equals>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </less-than-equals>
-            </and>
-        </condition>
-    </animation>
-    <animation>
-        <type>select</type>
-        <object-name>INHG-YEL</object-name>
-        <condition>
-            <and>
-                <not>
-                    <property>instrumentation/efis/inputs/kpa-mode</property>
-                </not>
-                <not>
-                    <property>instrumentation/inputs/setting-std</property>
-                </not>
-                <greater-than>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </greater-than>
-            </and>
         </condition>
     </animation>
 
@@ -1796,89 +1747,7 @@ Syd Adams
         <type>select</type>
         <object-name>HPA</object-name>
         <condition>
-            <and>
                 <property>instrumentation/efis/inputs/kpa-mode</property>
-                <not>
-                    <property>instrumentation/inputs/setting-std</property>
-                </not>
-                <less-than-equals>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </less-than-equals>
-            </and>
-        </condition>
-    </animation>
-    <animation>
-        <type>select</type>
-        <object-name>HPA-YEL</object-name>
-        <condition>
-            <and>
-                <property>instrumentation/efis/inputs/kpa-mode</property>
-                <not>
-                    <property>instrumentation/inputs/setting-std</property>
-                </not>
-                <greater-than>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </greater-than>
-            </and>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>INHG-STD</object-name>
-        <condition>
-            <and>
-		<property>instrumentation/inputs/setting-std</property>
-		<greater-than>
-		    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-		</greater-than>
-	    </and>
-        </condition>
-    </animation>
-    <animation>
-        <type>select</type>
-        <object-name>INHG-STD-YEL</object-name>
-        <condition>
-            <and>
-                <property>instrumentation/inputs/setting-std</property>
-                <less-than-equals>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </less-than-equals>
-            </and>
-	</condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>INHG-WHT</object-name>
-        <condition>
-            <and>
-                <not><property>instrumentation/efis/inputs/kpa-mode</property></not>
-                <property>instrumentation/inputs/setting-std</property>
-                <less-than-equals>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </less-than-equals>
-            </and>
-        </condition>
-    </animation>
-
-    <animation>
-        <type>select</type>
-        <object-name>HPA-WHT</object-name>
-        <condition>
-            <and>
-                <property>instrumentation/efis/inputs/kpa-mode</property>
-                <property>instrumentation/inputs/setting-std</property>
-                <less-than-equals>
-                    <property>instrumentation/altimeter/indicated-altitude-ft</property>
-		    <property>autopilot/settings/transition-altitude</property>
-                </less-than-equals>
-            </and>
         </condition>
     </animation>
 
@@ -2199,7 +2068,161 @@ Syd Adams
             <height type="int">32</height>
         </font-resolution>
     </text-->
+	
+    <text>
+        <name>Slat</name>
+        <offsets>
+            <x-m>0.0025</x-m>
+            <y-m>-0.086</y-m>
+            <z-m>-0.050</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text>SLATS</text>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Slat</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/slats</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>Flap15</name>
+        <offsets>
+            <x-m>0.0025</x-m>
+            <y-m>-0.086</y-m>
+            <z-m>-0.0580</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text>FLAPS 15</text>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Flap15</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>0.31</value>
+			</equals>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>Flap28</name>
+        <offsets>
+            <x-m>0.0025</x-m>
+            <y-m>-0.086</y-m>
+            <z-m>-0.0580</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text>FLAPS 28</text>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Flap28</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>0.58</value>
+			</equals>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>Flap35</name>
+        <offsets>
+            <x-m>0.0025</x-m>
+            <y-m>-0.086</y-m>
+            <z-m>-0.0580</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text>FLAPS 35</text>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Flap35</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>0.70</value>
+			</equals>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>Flap50</name>
+        <offsets>
+            <x-m>0.0025</x-m>
+            <y-m>-0.086</y-m>
+            <z-m>-0.0580</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type>literal</type>
+		<text>FLAPS 50</text>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.2</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
 
+	<animation>
+		<type>select</type>
+		<object-name>Flap50</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>1.00</value>
+			</equals>
+		</condition>
+	</animation>
 
     <animation>
         <object-name>speedtrend.up</object-name>

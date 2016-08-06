@@ -199,6 +199,8 @@
 		</center>
 	</animation>
 
+
+<!-- FUEL -->
 			<animation>
 		<type>select</type>
 		<object-name>ltank.1</object-name>
@@ -1083,7 +1085,311 @@ FSC.btn
 		    <z>0</z>
 		</axis>
 	</animation>
+
+<!-- HYDRAULICS -->
+	<!-- Hydraulic System Control Button -->
+	<animation>
+		<type>pick</type>
+		<object-name>HSC.btn</object-name>
+		<action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+			<command>property-toggle</command>
+			<property>controls/hydraulic/auto-mode</property>
+		    </binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HSC.btn</object-name>
+		<property>controls/hydraulic/auto-mode</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Aux Pumps -->
+	<animation>
+		<type>pick</type>
+		<object-name>AUXhyd1.btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/aux-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>AUXhyd1.btn</object-name>
+		<property>controls/hydraulic/aux-pump</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		
+	<animation>
+		<type>pick</type>
+		<object-name>AUXhyd2.btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/aux-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>AUXhyd2.btn</object-name>
+		<property>controls/hydraulic/aux-pump[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Engine Driven Pumps -->
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.1L</object-name>
+		<object-name>HydEDP.1Lon</object-name>
+		<object-name>HydEDP.1R</object-name>
+		<object-name>HydEDP.1Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
 	
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump[1]</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump[1]</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.2L</object-name>
+		<object-name>HydEDP.2Lon</object-name>
+		<object-name>HydEDP.2R</object-name>
+		<object-name>HydEDP.2Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/engine-pump[2]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<condition>
+		    <not>
+			<property>controls/hydraulic/engine-pump[2]</property>
+		    </not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<condition>
+			<property>controls/hydraulic/engine-pump[2]</property>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydEDP.3L</object-name>
+		<object-name>HydEDP.3Lon</object-name>
+		<object-name>HydEDP.3R</object-name>
+		<object-name>HydEDP.3Ron</object-name>
+		<property>systems/hydraulic/engine-pump-pressure-low[2]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- RMPs -->
+	<animation>
+		<type>pick</type>
+		<object-name>HydRMP.13</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/electric-pump</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydRMP.13</object-name>
+		<property>systems/hydraulic/rmp</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+		
+	<animation>
+		<type>pick</type>
+		<object-name>HydRMP.23</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/hydraulic/electric-pump[1]</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydRMP.23</object-name>
+		<property>systems/hydraulic/rmp[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Low Pressure Indicators -->
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.1</object-name>
+		<property>systems/hydraulic/system-fault</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.2</object-name>
+		<property>systems/hydraulic/system-fault[1]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>HydPress.3</object-name>
+		<property>systems/hydraulic/system-fault[2]</property>
+		<factor>0.0625</factor>
+		<axis>
+		    <x>1</x>
+		    <y>0</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
     <animation>
         <type>rotate</type>
         <object-name>emgpwrknob</object-name>

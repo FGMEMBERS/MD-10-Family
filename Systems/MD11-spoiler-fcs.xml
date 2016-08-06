@@ -11,7 +11,7 @@
 				<and>
 					<property>controls/engines/engine[0]/throttle-lever</property>
 					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
 					<equals>
 						<property>controls/flight/speedbrake-lever</property>
 						<value>1</value>
@@ -39,7 +39,7 @@
 				</equals>
 				<or>
 					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
 				</or>
 				<greater-than>
 					<property>velocities/groundspeed-kt</property>
@@ -56,7 +56,7 @@
 				<not><property>controls/engines/engine[0]/reverser</property></not>
 				<property>controls/engines/engine[0]/throttle-lever</property>
 				<property>gear/gear[1]/wow</property>
-				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</and>
 		</R>
 		<output>controls/flight/speedbrake</output>
@@ -71,7 +71,7 @@
 			<condition>
 				<and>
 					<not><property>gear/gear[1]/wow</property></not>
-					<not><property>gear/gear[1]/wow</property></not>
+					<not><property>gear/gear[2]/wow</property></not>
 				</and>
 			</condition>
 		</enable>
@@ -92,7 +92,7 @@
 			<condition>
 				<or>
 					<property>gear/gear[1]/wow</property>
-					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
 				</or>
 			</condition>
 		</enable>

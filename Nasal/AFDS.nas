@@ -119,7 +119,6 @@ var AFDS = {
 		    me.AP.setBoolValue(1);
 			me.at1.setBoolValue(1);
 			me.at2.setBoolValue(1);
-			setprop("controls/switches/apoffsound", 0)
     },
 
 ####    Yoke AP Disconnect Button    ####
@@ -246,6 +245,20 @@ var AFDS = {
         if((disabled)and(output==0)){output = 1;me.AP.setValue(0);}
         setprop("autopilot/internal/target-pitch-deg",getprop("orientation/pitch-deg"));
         setprop("autopilot/internal/target-roll-deg",0);
+	if (output == 0) {
+            if (abs(getprop("/velocities/vertical-speed-fps")*60) < 300) {
+		if (me.vertical_mode.getValue() == 0) me.input(1,1);
+	    } else {
+		if (me.vertical_mode.getValue() == 0) me.input(1,2);
+		if (me.vertical_mode.getValue() == 2) {
+		    var vs_set = me.vs_setting.getValue();
+		    me.vertical_mode.setValue(0);
+		    me.input(1,2);
+		    settimer(func me.vs_setting.setValue(vs_set),1);
+		}
+	    }
+	    if (me.lateral_mode.getValue() == 0) me.input(0,2);
+	}
         me.AP_passive.setValue(output);
     },
 ###################
@@ -608,10 +621,16 @@ var afds = AFDS.new();
 
 setlistener("/sim/signals/fdm-initialized", func {
     settimer(update_afds, 6);
-	setprop("controls/switches/apoffsound", 1);
-	afds.input(1,8);
-	afds.input(0,1);
-    print("AUTOFLIGHT ... FINE!");
+    var APlisten = func {
+	setlistener("instrumentation/afds/inputs/AP", func {
+	    if (!getprop("instrumentation/afds/inputs/AP")) {
+		setprop("controls/switches/apoffsound", 1);
+		settimer(func{setprop("controls/switches/apoffsound",0)},3);
+	    }
+	},0,0);
+    }
+    settimer(APlisten,3);
+    print("AUTOFLIGHT ... Check!");
 });
 
 var lim=30;

@@ -56,7 +56,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/PFD/PFD_L.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>-0.6120</y-m>
+<y-m>-0.6820</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -68,7 +68,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/PFD/PFD_L.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>0.6120</y-m>
+<y-m>0.6820</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -79,7 +79,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/ND/ND_L.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>-0.3860</y-m>
+<y-m>-0.430</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -90,7 +90,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/ND/ND_R.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>0.3860</y-m>
+<y-m>0.4360</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -101,7 +101,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/EAD/EAD_1_GE.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>-0.16</y-m>
+<y-m>-0.18</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -112,7 +112,7 @@
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/EAD/EAD_2.xml</path>
 <offsets>
 <x-m>-3.05</x-m>
-<y-m>0.16</y-m>
+<y-m>0.18</y-m>
 <z-m>0.9</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
@@ -135,7 +135,7 @@
 <offsets>
 <x-m>-3.02</x-m>
 <y-m>0.05</y-m>
-<z-m>0.755</z-m>
+<z-m>0.745</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
 </model>
@@ -146,7 +146,7 @@
 <offsets>
 <x-m>-3.02</x-m>
 <y-m>-0.05</y-m>
-<z-m>0.755</z-m>
+<z-m>0.745</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
 </model>
@@ -347,7 +347,7 @@
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[0]/throttle-lever</property>
+<property>controls/engines/engine[0]/throttle</property>
 <step>0.01</step>
 <max>1</max>
 </binding>
@@ -358,7 +358,7 @@
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[0]/throttle-lever</property>
+<property>controls/engines/engine[0]/throttle</property>
 <step>-0.01</step>
 <min>0</min>
 </binding>
@@ -369,7 +369,7 @@
 <object-name>Eng1ThrustLever</object-name>
 <object-name>Eng1ThrustATOff</object-name>
 <object-name>Eng1Reverser</object-name>
-<property>controls/engines/engine[0]/throttle-lever</property>
+<property>controls/engines/engine[0]/throttle</property>
 <interpolation>
 <entry><ind>0</ind><dep>8</dep></entry>
 <entry><ind>0.6</ind><dep>-34</dep></entry>
@@ -433,7 +433,7 @@ MD11.engine1.reverse_thrust();
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[1]/throttle-lever</property>
+<property>controls/engines/engine[1]/throttle</property>
 <step>0.01</step>
 <max>1</max>
 </binding>
@@ -444,7 +444,7 @@ MD11.engine1.reverse_thrust();
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[1]/throttle-lever</property>
+<property>controls/engines/engine[1]/throttle</property>
 <step>-0.01</step>
 <min>0</min>
 </binding>
@@ -455,7 +455,7 @@ MD11.engine1.reverse_thrust();
 <object-name>Eng2ThrustLever</object-name>
 <object-name>Eng2ThrustTOGA</object-name>
 <object-name>Eng2Reverser</object-name>
-<property>controls/engines/engine[1]/throttle-lever</property>
+<property>controls/engines/engine[1]/throttle</property>
 <interpolation>
 <entry><ind>0</ind><dep>8</dep></entry>
 <entry><ind>0.6</ind><dep>-34</dep></entry>
@@ -493,7 +493,7 @@ MD11.engine2.reverse_thrust();
 <animation>
 <type>rotate</type>
 <object-name>Eng2Reverser</object-name>
-<property>controls/engines/engine[1]/throttle-lever</property>
+<property>controls/engines/engine[1]/throttle</property>
 <factor>140</factor>
 <condition>
 <property>controls/engines/engine[1]/reverser</property>
@@ -532,7 +532,7 @@ MD11.engine2.reverse_thrust();
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[2]/throttle-lever</property>
+<property>controls/engines/engine[2]/throttle</property>
 <step>0.01</step>
 <max>1</max>
 </binding>
@@ -543,7 +543,7 @@ MD11.engine2.reverse_thrust();
 <repeatable type="bool">true</repeatable>
 <binding>
 <command>property-adjust</command>
-<property>controls/engines/engine[2]/throttle-lever</property>
+<property>controls/engines/engine[2]/throttle</property>
 <step>-0.01</step>
 <min>0</min>
 </binding>
@@ -554,7 +554,7 @@ MD11.engine2.reverse_thrust();
 <object-name>Eng3ThrustLever</object-name>
 <object-name>Eng3ThrustATOff</object-name>
 <object-name>Eng3Reverser</object-name>
-<property>controls/engines/engine[2]/throttle-lever</property>
+<property>controls/engines/engine[2]/throttle</property>
 <interpolation>
 <entry><ind>0</ind><dep>8</dep></entry>
 <entry><ind>0.6</ind><dep>-34</dep></entry>

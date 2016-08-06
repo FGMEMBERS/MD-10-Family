@@ -1,4 +1,4 @@
-#MD-10 systems
+#MD-11 systems
 #Syd Adams
 #
 var SndOut = props.globals.getNode("sim/sound/Ovolume",1);
@@ -329,6 +329,7 @@ var RHeng=Engine.new(2);
 var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts");
 
 setlistener("sim/signals/fdm-initialized", func {
+	setprop("/controls/flight/zero", "0");
     SndOut.setDoubleValue(0.15);
     chronometer.stop();
     props.globals.initNode("instrumentation/clock/ET-display",0,"INT");
@@ -510,15 +511,50 @@ setlistener("instrumentation/tcas/outputs/traffic-alert", func(traffic_alert){
 #        setprop("controls/flight/speedbrake-lever",2*getprop("controls/flight/speedbrake"));
 #}
 
-setlistener("controls/flight/flaps", func { controls.click(6) } );
-setlistener("controls/gear/gear-down", func { controls.click(8) } );
-controls.gearDown = func(v) {
-    if (v < 0) {
-        if(!getprop("gear/gear[1]/wow"))setprop("controls/gear/gear-down", 0);
-    } elsif (v > 0) {
-      setprop("controls/gear/gear-down", 1);
+## FLAPS/SLATS
+##############
+controls.flapsDown = func(step) {
+    if (step > 0) {
+	if (getprop("controls/flight/slats") == 0 and getprop("systems/hydraulic/equipment/enable-slat")) {
+	    setprop("controls/flight/slats",1);
+	    return;
+	}
+    }
+    if (step < 0) {
+	if (getprop("controls/flight/flaps") == 0 and getprop("systems/hydraulic/equipment/enable-slat"))
+	    setprop("controls/flight/slats",0);
+    }
+    if (getprop("systems/hydraulic/equipment/enable-flap")) {
+        if(step == 0) return;
+        if(props.globals.getNode("/sim/flaps") != nil) {
+                globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
+                return;
+        }
+        # Hard-coded flaps movement in 3 equal steps:
+        var val = 0.3333334 * step + getprop("/controls/flight/flaps");
+        setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
     }
 }
+setlistener("controls/flight/flaps", func { controls.click(6) } );
+
+## SPEEDBRAKES
+##############
+setlistener("controls/flight/speedbrake-lever", func (spoiler) {
+	if (spoiler.getValue() > 0 and !getprop("systems/hydraulic/equipment/enable-spoil")) setprop("controls/flight/speedbrake-lever",0);
+},0,0);
+
+## GEAR
+#######
+controls.gearDown = func(v) {
+    var wow = getprop("gear/gear[0]/wow") or getprop("gear/gear[1]/wow") or getprop("gear/gear[2]/wow");
+    if (v < 0 and getprop("systems/hydraulic/equipment/enable-gear")) {
+        if(!wow) setprop("/controls/gear/gear-down", 0);
+    } elsif (v > 0) { 
+      setprop("/controls/gear/gear-down", 1);
+    }
+}
+setlistener("controls/gear/gear-down", func { controls.click(8) } );
+
 
 controls.toggleLandingLights = func()
 {
@@ -608,18 +644,11 @@ var Startup = func{
     setprop("controls/flight/elevator-trim",0);
     setprop("controls/flight/aileron-trim",0);
     setprop("controls/flight/rudder-trim",0);
+    setprop("controls/hydraulic/auto-mode",1);
     setprop("instrumentation/transponder/mode-switch",4); # transponder mode: TA/RA
     setprop("engines/engine[0]/run",1);
     setprop("engines/engine[1]/run",1);
-	setprop("engines/engine[2]/run",1);
-	setprop("controls/hydraulics/system[1]/C1ELEC-switch", 1);
-	setprop("controls/hydraulics/system[1]/C2ELEC-switch", 1);
-	setprop("controls/hydraulics/system/LACMP-switch", 1);
-	setprop("controls/hydraulics/system[1]/C1ADP-switch", 1);
-	setprop("controls/hydraulics/system[1]/C2ADP-switch", 1);
-	setprop("controls/hydraulics/system[2]/RACMP-switch", 1);
-#	setprop("instrumentation/afds/inputs/at-armed", 1);
-#	setprop("instrumentation/afds/inputs/at-armed[1]", 1);
+    setprop("engines/engine[2]/run",1);
 }
 
 var Shutdown = func{
@@ -664,12 +693,7 @@ var Shutdown = func{
     setprop("engines/engine[1]/fuel-flow_pph",0);
 	setprop("engines/engine[2]/fuel-flow_pph",0);
     setprop("instrumentation/weu/state/takeoff-mode",1);
-	setprop("controls/hydraulics/system[1]/C1ELEC-switch", 0);
-	setprop("controls/hydraulics/system[1]/C2ELEC-switch", 0);
-	setprop("controls/hydraulics/system/LACMP-switch", 0);
-	setprop("controls/hydraulics/system[1]/C1ADP-switch", 0);
-	setprop("controls/hydraulics/system[1]/C2ADP-switch", 0);
-	setprop("controls/hydraulics/system[2]/RACMP-switch", 0);
+    settimer(func setprop("controls/hydraulic/auto-mode",0),2);
 }
 
 var click_reset = func(propName) {
@@ -1153,7 +1177,10 @@ var update_systems = func {
     if(getprop("controls/gear/gear-down")){
         setprop("sim/multiplay/generic/float[0]",getprop("gear/gear[0]/compression-m"));
         setprop("sim/multiplay/generic/float[1]",getprop("gear/gear[1]/compression-m"));
-        setprop("sim/multiplay/generic/float[5]",getprop("gear/gear[2]/compression-m"));
+        setprop("sim/multiplay/generic/float[2]",getprop("gear/gear[1]/compression-m"));
+        setprop("sim/multiplay/generic/float[3]",getprop("gear/gear[2]/compression-m"));
+        setprop("sim/multiplay/generic/float[4]",getprop("gear/gear[2]/compression-m"));
+#       setprop("sim/multiplay/generic/float[5]",getprop("gear/gear[3]/compression-m"));
     }
 
     var et_tmp = getprop("instrumentation/clock/ET-sec");
@@ -1168,5 +1195,5 @@ var update_systems = func {
 
 var dialogs =
 {
-	doors: gui.Dialog.new("sim/gui/dialogs/doors/dialog", "Aircraft/MD-10-Family/Systems/doors-dlg.xml"),
+	doors: gui.Dialog.new("sim/gui/dialogs/doors/dialog", "Aircraft/MD-11/Systems/doors-dlg.xml"),
 };

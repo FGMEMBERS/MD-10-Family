@@ -1,4 +1,4 @@
-# MD-10 fuel system, John Williams, April 2014
+# MD-11 fuel system, John Williams, April 2014
 
 var fuelsys = {
     new : func {
@@ -397,11 +397,11 @@ var fuelsys = {
 			}
 		    }
 		} else {
-		# Every 30 minutes, transfer fuel fwd for 2.5 minutes
+		# Every 30 minutes, transfer fuel fwd for 1 minute
 		    me.ticks+= 1;
-		    if (me.ticks >= 3600) {
+		    if ((me.ticks * getprop("sim/speed-up")) >= 3600) {
 			xfer_fwd();
-			if (me.ticks >= 3900 and me.lev[4].getValue() < me.total.getValue() * 0.095)
+			if ((me.ticks * getprop("sim/speed-up")) >= 3720 and me.lev[4].getValue() < me.total.getValue() * 0.095)
 			    me.ticks = 0;
 		    }
 		    if (me.empty[4].getBoolValue()) me.tail_mgm_enable = 0;
