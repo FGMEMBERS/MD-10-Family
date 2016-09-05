@@ -229,6 +229,9 @@
 	    <autopilot>
 		<path>Aircraft/MD-10-Family/Systems/MD11-flt-ctrls.xml</path>
 	    </autopilot>
+	    <autopilot>
+		<path>Aircraft/MD-11/Systems/pressurization.xml</path>
+	    </autopilot>
             <!--autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/MD-10-Family/Systems/MD11-autobrake.xml</path>
@@ -832,10 +835,14 @@
             <file>Aircraft/MD-10-Family/Nasal/wipers.nas</file>
 			<file>Aircraft/MD-10-Family/Nasal/speedbrakes.nas</file>
 			<file>Aircraft/MD-10-Family/Nasal/autobrakes.nas</file>
+            <file>Aircraft/MD-10-Family/Nasal/pneumatic.nas</file>
         </MD11>
 	<hydraulics>
             <file>Aircraft/MD-10-Family/Nasal/hydraulic.nas</file>
 	</hydraulics>
+	<pressurization>
+	    <file>Aircraft/MD-10-Family/Nasal/cabin-pressure.nas</file>
+	</pressurization>
         <dialogs>
             <file>Aircraft/MD-10-Family/Nasal/dialogs.nas</file>
         </dialogs>

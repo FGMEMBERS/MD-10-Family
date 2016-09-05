@@ -1,25 +1,7 @@
 ﻿
 <PropertyList>
 
- <path>EAD_2.ac</path>
- 
-    <animation>
-    <type>scale</type>
-    <x-offset>1.1</x-offset>
-    <y-offset>1.1</y-offset>
-    <z-offset>1.1</z-offset>
-    </animation>
- 
-    <animation>
-        <type>select</type>
-        <object-name>Power.off</object-name>
-        <condition>
-            <less-than>
-                <property>systems/electrical/outputs/efis</property>
-                <value>15</value>
-            </less-than>
-        </condition>
-    </animation>
+ <path>CONFIG.ac</path>
 
 		<animation>
 		<type>textranslate</type>

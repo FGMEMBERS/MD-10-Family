@@ -339,6 +339,7 @@ setlistener("sim/signals/fdm-initialized", func {
     props.globals.initNode("instrumentation/clock/set-knob",0,"INT");
 #    setprop("instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
     setprop("sim/flaps/current-setting", 0);
+    setprop("/controls/sd/mode", "CONFIG");   # Initial SD Display Mode
 
 	balance_fuel();
 #    setprop("controls/fuel/tank[0]/boost-pump-switch[0]",1);
@@ -526,6 +527,7 @@ controls.flapsDown = func(step) {
     }
     if (getprop("systems/hydraulic/equipment/enable-flap")) {
         if(step == 0) return;
+	if(step > 0 and getprop("gear/gear[0]/wow")) setprop("controls/flight/droop",1);
         if(props.globals.getNode("/sim/flaps") != nil) {
                 globals.controls.stepProps("/controls/flight/flaps", "/sim/flaps", step);
                 return;
@@ -534,6 +536,7 @@ controls.flapsDown = func(step) {
         var val = 0.3333334 * step + getprop("/controls/flight/flaps");
         setprop("/controls/flight/flaps", val > 1 ? 1 : val < 0 ? 0 : val);
     }
+    if (getprop("controls/flight/flaps") == 0) setprop("controls/flight/droop",0);
 }
 setlistener("controls/flight/flaps", func { controls.click(6) } );
 
@@ -614,7 +617,7 @@ controls.toggleLandingLights = func()
 var Startup = func{
     setprop("sim/model/armrest",1);
     balance_fuel();
-	setprop("controls/switches/emgpwr", 1);
+    setprop("controls/switches/emgpwr", 1);
     setprop("controls/fuel/auto-manage",1);
     setprop("consumables/fuel/tank[0]/selected",1);
     setprop("consumables/fuel/tank[1]/selected",1);
@@ -645,6 +648,7 @@ var Startup = func{
     setprop("controls/flight/aileron-trim",0);
     setprop("controls/flight/rudder-trim",0);
     setprop("controls/hydraulic/auto-mode",1);
+    setprop("controls/pneumatic/auto-mode",1);
     setprop("instrumentation/transponder/mode-switch",4); # transponder mode: TA/RA
     setprop("engines/engine[0]/run",1);
     setprop("engines/engine[1]/run",1);
@@ -654,7 +658,7 @@ var Startup = func{
 var Shutdown = func{
     setprop("controls/electric/APU-generator",0);
     setprop("systems/electrical/outputs/avionics",0);
-	setprop("controls/switches/emgpwr", 0);
+    setprop("controls/switches/emgpwr", 0);
     setprop("controls/electric/battery-switch",0);
     setprop("controls/electric/inverter-switch",0);
     setprop("controls/lighting/instruments-norm",0);
@@ -670,7 +674,7 @@ var Shutdown = func{
     setprop("controls/lighting/landing-light[2]",0);
     setprop("controls/engines/engine[0]/cutoff",1);
     setprop("controls/engines/engine[1]/cutoff",1);
-	setprop("controls/engines/engine[2]/cutoff",1);
+    setprop("controls/engines/engine[2]/cutoff",1);
     setprop("controls/flight/elevator-trim",0);
     setprop("controls/flight/aileron-trim",0);
     setprop("controls/flight/rudder-trim",0);
@@ -682,17 +686,18 @@ var Shutdown = func{
     setprop("controls/engines/StartIgnition-knob[2]",0);
     setprop("engines/engine[0]/run",0);
     setprop("engines/engine[1]/run",0);
-	setprop("engines/engine[2]/run",0);
+    setprop("engines/engine[2]/run",0);
     setprop("engines/engine[0]/rpm",0);
     setprop("engines/engine[1]/rpm",0);
-	setprop("engines/engine[2]/rpm",0);
+    setprop("engines/engine[2]/rpm",0);
     setprop("engines/engine[0]/n2rpm",0);
     setprop("engines/engine[1]/n2rpm",0);
-	setprop("engines/engine[2]/n2rpm",0);
+    setprop("engines/engine[2]/n2rpm",0);
     setprop("engines/engine[0]/fuel-flow_pph",0);
     setprop("engines/engine[1]/fuel-flow_pph",0);
-	setprop("engines/engine[2]/fuel-flow_pph",0);
+    setprop("engines/engine[2]/fuel-flow_pph",0);
     setprop("instrumentation/weu/state/takeoff-mode",1);
+    setprop("controls/pneumatic/auto-mode",0);
     settimer(func setprop("controls/hydraulic/auto-mode",0),2);
 }
 
@@ -1181,6 +1186,7 @@ var update_systems = func {
     et_tmp = et_hr+et_min;
     setprop("instrumentation/clock/ET-display",et_tmp);
 	switch_ind();
+    if (getprop("surface-positions/flap-pos-norm")==0 and !getprop("gear/gear[0]/wow")) setprop("controls/flight/droop",0);
 
     settimer(update_systems,0);
 }
