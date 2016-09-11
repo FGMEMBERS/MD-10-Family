@@ -153,7 +153,7 @@
 	<control-output control="STEER" prop="/controls/gear/nosegear-steering-angle-rad" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
-	<control-speed control="EXTEND" transition-time="10"/>
+	<control-speed control="EXTEND" transition-time="15.0"/>
     </gear>
     <!-- Left main gears -->
     <gear x="-1.855" y="5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
@@ -161,7 +161,7 @@
 	<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND" />
 	<control-output control="EXTEND" prop="/gear/gear[1]/position-norm" />
-	<control-speed control="EXTEND" transition-time="10.0" />
+	<control-speed control="EXTEND" transition-time="19.0" />
     </gear>
     <!-- Right main gears -->
     <gear x="-1.855" y="-5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
@@ -169,7 +169,7 @@
 	<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND" />
 	<control-output control="EXTEND" prop="/gear/gear[2]/position-norm" />
-	<control-speed control="EXTEND" transition-time="10.0" />
+	<control-speed control="EXTEND" transition-time="19.0" />
     </gear>
 
     <!-- Fuel and payload -->

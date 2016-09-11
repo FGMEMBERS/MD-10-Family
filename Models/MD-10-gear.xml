@@ -450,20 +450,6 @@
 		</center>
 	</animation>
 	<animation>
-		<name>Center main gear lower strut</name>
-		<type>translate</type>
-		<object-name>GearCCompressLo</object-name>
-		<object-name>GearCCompressHi</object-name>
-		<object-name>GearCStrutLo</object-name>
-		<object-name>Center main gear wheels</object-name>
-		<property>gear/gear[3]/compression-m</property>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
 		<name>Center main gear upper strut</name>
 		<object-name>GearCScissorLo</object-name>
 		<object-name>GearCScissorHi</object-name>
