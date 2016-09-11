@@ -5,8 +5,29 @@ MATERIAL "Material.004" rgb 0.8 0.0749 0.3914  amb 1 1 1  emis 0.8 0.8 0.8  spec
 MATERIAL "Material" rgb 0.8 0.007 0  amb 1 1 1  emis 0.8 0.8 0.8  spec 0.5 0.5 0.5  shi 50  trans 0
 MATERIAL "Material.001" rgb 0.8 0.5614 0  amb 1 1 1  emis 0.8 0.8 0.8  spec 0.5 0.5 0.5  shi 50  trans 0
 MATERIAL "buttonlights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0.33 0.33 0.33  shi 32  trans 0
+MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 OBJECT world
-kids 26
+kids 27
+OBJECT poly
+name "Off"
+loc 0.0045 0.00365006 0
+data 9
+Power.off
+crease 30.000002
+numvert 4
+0 0.097194 -0.09669
+0 -0.088225 -0.09669
+0 -0.088225 0.097585
+0 0.097194 0.097585
+numsurf 1
+SURF 0x20
+mat 6
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
 OBJECT poly
 name "block"
 loc -0.00016603 0.00820872 -0.000481358

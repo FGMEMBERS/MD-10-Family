@@ -10,7 +10,7 @@
 	<params>
 		<on-fire>engines/engine[0]/on-fire</on-fire>
 		<n1>engines/engine[0]/n1</n1>
-		<reverser-pos-norm>engines/engine[0]/reverser-pos-norm</reverser-pos-norm>
+		<reverser-pos-norm>sim/multiplay/generic/float[7]</reverser-pos-norm>
 	</params>
 
 	<model>

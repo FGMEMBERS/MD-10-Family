@@ -13,7 +13,18 @@ Syd Adams
     <y-offset>1.1</y-offset>
     <z-offset>1.1</z-offset>
     </animation>
- 
+	
+    <animation>
+        <type>select</type>
+        <object-name>Off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
+
     <animation>
         <type>select</type>
         <object-name>locpointer</object-name>
@@ -631,9 +642,9 @@ Syd Adams
         <object-name>hdg-bug</object-name>
         <property>autopilot/internal/heading-bug-error-deg</property>
         <interpolation>
-            <entry><ind>-35</ind><dep>-35</dep></entry>
+            <entry><ind>-35</ind><dep>-30</dep></entry>
             <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>35</ind><dep>35</dep></entry>
+            <entry><ind>35</ind><dep>30</dep></entry>
         </interpolation>
         <center>
             <x-m>0.002</x-m>
@@ -2432,4 +2443,36 @@ Syd Adams
 			</greater-than>
 		</condition>
     </animation>
+
+    <animation>
+	<type>pick</type>
+        <object-name>Asitext.100</object-name>
+        <object-name>Asitext.010</object-name>
+        <object-name>Asitext.001</object-name>
+	<hovered>
+	    <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>IASnow</tooltip-id>
+		<label>IAS: %.0f kts</label>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+	    </binding>
+	</hovered>
+    </animation>
+
+    <animation>
+	<type>pick</type>
+	<object-name>Alttext10000</object-name>
+	<object-name>Alttext1000</object-name>
+	<object-name>Alttext100</object-name>
+	<object-name>Alttext10</object-name>
+	<hovered>
+	    <binding>
+		<command>set-tooltip</command>
+		<tooltip-id>ALTnow</tooltip-id>
+		<label>Altitude: %.0f ft</label>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
+	    </binding>
+	</hovered>
+    </animation>	
+
 </PropertyList>

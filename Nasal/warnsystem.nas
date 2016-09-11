@@ -219,22 +219,22 @@ var WEU =
         var siren  = (size(me.msgs_alert)!=0);
         var vgrosswt = math.sqrt(grosswt/730284);
 		var altitude_compensate = (getprop("instrumentation/altimeter/indicated-altitude-ft") / 1000);
-		me.vref.setValue(vgrosswt * 166 + altitude_compensate);
+		me.vref.setValue(vgrosswt * 137 + altitude_compensate);
         # calculate Flap Maneuver Speed
-		me.flap.setValue(vgrosswt * 166 + 80 + altitude_compensate);
-		me.fl1.setValue(vgrosswt * 166 + 60 + altitude_compensate);
-		me.fl5.setValue(vgrosswt * 166 + 40 + altitude_compensate);
-		me.fl15.setValue(vgrosswt * 166 + 20 + altitude_compensate);
+		me.flap.setValue(vgrosswt * 137 + 80 + altitude_compensate);
+		me.fl1.setValue(vgrosswt * 137 + 60 + altitude_compensate);
+		me.fl5.setValue(vgrosswt * 137 + 40 + altitude_compensate);
+		me.fl15.setValue(vgrosswt * 137 + 20 + altitude_compensate);
 
         # calculate stall speed
 		var vref_table = [
-			[0, vgrosswt * 166 + 80],
-			[0.033, vgrosswt * 166 + 60],
-			[0.166, vgrosswt * 166 + 40],
-			[0.500, vgrosswt * 166 + 20],
+			[0, vgrosswt * 140 + 80],
+			[0.033, vgrosswt * 137 + 60],
+			[0.166, vgrosswt * 137 + 40],
+			[0.500, vgrosswt * 137 + 20],
 			[0.666, vgrosswt * 180],
 			[0.833, vgrosswt * 174],
-			[1.000, vgrosswt * 166]];
+			[1.000, vgrosswt * 137]];
 
 		var vref_flap = interpolate_table(vref_table, me.flaps);
 		var stallspeed = (vref_flap - 10 + altitude_compensate);
