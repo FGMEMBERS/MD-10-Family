@@ -403,7 +403,7 @@
 <animation>
 <type>rotate</type>
 <object-name>Eng1Reverser</object-name>
-<property>controls/engines/engine[0]/throttle-lever</property>
+<property>controls/engines/engine[0]/throttle</property>
 <factor>140</factor>
 <condition>
 <property>controls/engines/engine[0]/reverser</property>
@@ -476,7 +476,7 @@
 <animation>
 <type>rotate</type>
 <object-name>Eng2Reverser</object-name>
-<property>controls/engines/engine[1]/throttle-lever</property>
+<property>controls/engines/engine[1]/throttle</property>
 <factor>140</factor>
 <condition>
 <property>controls/engines/engine[1]/reverser</property>
@@ -562,7 +562,7 @@
 <animation>
 <type>rotate</type>
 <object-name>Eng3Reverser</object-name>
-<property>controls/engines/engine[2]/throttle-lever</property>
+<property>controls/engines/engine[2]/throttle</property>
 <factor>140</factor>
 <condition>
 <property>controls/engines/engine[2]/reverser</property>
@@ -577,6 +577,104 @@
 <y-m>0</y-m>
 <z-m>0.87</z-m>
 </center>
+</animation>
+
+<!-- Pitch Trim Thing -->
+
+    <animation>
+        <type>pick</type>
+        <object-name>ParkingBrake_0</object-name>
+        <object-name>ParkingBrake_1</object-name>
+        <action>
+                <button>0</button>
+                <repeatable>true</repeatable>
+                <binding>
+                        <command>property-adjust</command>
+                        <property>/controls/flight/elevator-trim</property>
+                        <step>-0.01</step>
+                        <min>-0.8</min>
+                        <max>0.8</max>
+                </binding>
+                <binding>
+                        <command>property-assign</command>
+                        <property>/controls/flight/pitchtrimlever</property>
+                        <value>-1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/controls/flight/pitchtrimlever</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+        </action>
+        <action>
+                <button>1</button>
+                <repeatable>true</repeatable>
+                <binding>
+                        <command>property-adjust</command>
+                        <property>/controls/flight/elevator-trim</property>
+                        <step>0.01</step>
+                        <min>-0.8</min>
+                        <max>0.8</max>
+                </binding>
+                <binding>
+                        <command>property-assign</command>
+                        <property>/controls/flight/pitchtrimlever</property>
+                        <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/controls/flight/pitchtrimlever</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+        </action>
+    </animation>
+	
+<animation>
+  <type>rotate</type>
+  <object-name>ParkingBrake_0</object-name>
+  <object-name>ParkingBrake_1</object-name>
+  <property>/controls/flight/pitchtrimlever</property>
+  <interpolation>
+    <entry><ind>-1</ind><dep>-30</dep></entry>
+    <entry><ind> 0</ind><dep> -5</dep></entry>
+    <entry><ind> 1</ind><dep> 20</dep></entry>
+  </interpolation>   
+  <center>
+	<x-m>-2.548</x-m>
+	<y-m>0</y-m>
+	<z-m>0.522</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ElevatorTrim_0</object-name>
+  <object-name>ElevatorTrim_1</object-name>
+  <property>/controls/flight/elevator-trim</property>
+  <interpolation>
+    <entry><ind>-1</ind><dep>-55</dep></entry>
+    <entry><ind> 0</ind><dep>-25</dep></entry>
+    <entry><ind> 1</ind><dep>  0</dep></entry>
+  </interpolation>   
+  <center>
+	<x-m>-2.548</x-m>
+	<y-m>0</y-m>
+	<z-m>0.522</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
 </animation>
 
 <!-- Engine fuel flow switches -->
