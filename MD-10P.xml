@@ -13,11 +13,11 @@
 
 <airplane mass="266191">
     <!-- Approach configuration based on stall chart http://tinypic.com/hsqd1l.jpg (from airliners.net thread http://www.airliners.net/aviation-forums/tech_ops/read.main/135496/) -->
-    <approach speed="138" aoa="4.0" fuel="0.2">
-	<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.6" />
-	<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.6" />
-	<control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.6" />
-	<control-setting axis="/controls/flight/flaps" value="0.7" />
+    <approach speed="143" aoa="4.0" fuel="0.2">
+	<control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.4" />
+	<control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.4" />
+	<control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.4" />
+	<control-setting axis="/controls/flight/flaps" value="1.0" />
 	<control-setting axis="/controls/flight/slats" value="1.0" />
 	<control-setting axis="/controls/gear/gear-down" value="1.0" />
 	<solve-weight idx="0" weight="1200.0" />
@@ -150,13 +150,13 @@
     <!-- Nosegear -->
     <gear x="18.8" y="0.0" z="-0.451" compression="0.4" spring="0.8" damp="4.0">
 	<control-input control="STEER" axis="/controls/gear/nosegear-steering-cmd-norm" src0="-1.0" dst0="-1.2217304764" src1="1.0" dst1="1.2217304764" />
-	<control-output control="STEER" prop="/controls/gear/nosegear-steering-angle-rad" />
+	<control-output control="STEER" prop="/gear/gear[0]/steering-norm" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND"/>
 	<control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
 	<control-speed control="EXTEND" transition-time="15.0"/>
     </gear>
     <!-- Left main gears -->
-    <gear x="-1.855" y="5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
+    <gear x="-2.65" y="5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
 	<control-input axis="/controls/gear/brake-left" control="BRAKE"/>
 	<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND" />
@@ -164,7 +164,7 @@
 	<control-speed control="EXTEND" transition-time="19.0" />
     </gear>
     <!-- Right main gears -->
-    <gear x="-1.855" y="-5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
+    <gear x="-2.65" y="-5.25" z="-0.615" compression="0.7" spring="0.6" damp="1.0">
 	<control-input axis="/controls/gear/brake-right" control="BRAKE"/>
 	<control-input axis="/controls/gear/brake-parking" control="BRAKE" />
 	<control-input axis="/controls/gear/gear-down" control="EXTEND" />

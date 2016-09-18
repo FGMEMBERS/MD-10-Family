@@ -1,10 +1,9 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "white.000" rgb 1 1 1  amb 1 1 1  emis 0.798 0.798 0.798  spec 0 0 0  shi 50  trans 0
+MATERIAL "white.001" rgb 1 1 1  amb 1 1 1  emis 0.798 0.798 0.798  spec 0 0 0  shi 50  trans 0
 MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 50  trans 0
 MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 50  trans 0
 MATERIAL "magenta_rembrandt" rgb 0.7 0.0531 0.5509  amb 1 1 1  emis 0.6103 0.6103 0.6103  spec 0 0 0  shi 50  trans 0
-MATERIAL "white.001" rgb 1 1 1  amb 1 1 1  emis 0.798 0.798 0.798  spec 0 0 0  shi 50  trans 0
 OBJECT world
 kids 64
 OBJECT poly
@@ -39,7 +38,7 @@ numvert 4
 0 0.0105865 -0.0568276
 numsurf 1
 SURF 0x0
-mat 5
+mat 1
 refs 4
 3 1.00067 0.999407
 0 4.45843e-005 0.999407
@@ -48,7 +47,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atoff1"
-loc 0.000981323 0.0733507 0.0579427
+loc 0.000984333 0.0733507 0.0579427
 data 10
 enginepane
 texture "atoff1.JPG"
@@ -60,7 +59,7 @@ numvert 4
 0 0.0105788 0.0291501
 numsurf 1
 SURF 0x0
-mat 5
+mat 1
 refs 4
 0 1.00067 0.999407
 3 4.45843e-005 0.999407
@@ -81,7 +80,7 @@ numvert 4
 0 0.0105788 -0.0314898
 numsurf 1
 SURF 0x0
-mat 5
+mat 1
 refs 4
 3 1.00067 0.999407
 0 4.45843e-005 0.999407
@@ -102,7 +101,7 @@ numvert 4
 0 0.0105788 0.0518463
 numsurf 1
 SURF 0x0
-mat 5
+mat 1
 refs 4
 0 1.00067 0.999407
 3 4.45843e-005 0.999407

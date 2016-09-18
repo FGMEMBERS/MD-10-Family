@@ -510,7 +510,7 @@ refs 4
 kids 0
 OBJECT poly
 name "atoff1"
-loc 0.000981323 0.0733507 0.0579427
+loc 0.00100749 0.0733507 0.0579427
 data 10
 enginepane
 texture "atoff1.JPG"

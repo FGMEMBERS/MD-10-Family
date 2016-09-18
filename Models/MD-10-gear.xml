@@ -21,7 +21,7 @@
 		<type>rotate</type>
 		<object-name>GearNWheels</object-name>
 		<object-name>GearNStrutLo</object-name>
-		<property>controls/gear/nosegear-steering-cmd-norm</property>
+		<property>/sim/multiplay/generic/float[10]</property>
 		<factor>68</factor>
 		<axis>
 			<x>0</x>
@@ -39,7 +39,7 @@
 		<name>Nose gear wheels</name>
 		<type>spin</type>
 		<object-name>GearNWheels</object-name>
-		<property>gear/gear[0]/rollspeed-ms</property>
+		<property>/sim/multiplay/generic/float[11]</property>
 		<factor>20.275</factor>
 		<axis>
 			<x>0</x>
@@ -59,7 +59,7 @@
 		<object-name>GearNStrutLo</object-name>
 		<object-name>GearNStrutLoLink</object-name>
 		<object-name>Nose gear wheels</object-name>
-		<property>gear/gear[0]/compression-m</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<axis>
 			<x>0</x>
 			<y>0</y>
@@ -85,7 +85,7 @@
 						<div>
 							<difference>
 								<value>0.546</value>
-								<property>gear/gear[0]/compression-m</property>
+								<property>sim/multiplay/generic/float[0]</property>
 							</difference>
 							<value>0.584</value>
 						</div>
@@ -116,7 +116,7 @@
 						<div>
 							<difference>
 								<value>0.546</value>
-								<property>gear/gear[0]/compression-m</property>
+								<property>sim/multiplay/generic/float[0]</property>
 							</difference>
 							<value>0.584</value>
 						</div>
@@ -168,12 +168,31 @@
 			<z-m>2.6</z-m>
 		</center>
 	</animation>
+	
+	 <animation>
+		<type>rotate</type>
+		<object-name>GearL1Wheels</object-name>
+		<object-name>GearL2Wheels</object-name>
+		<object-name>GearLStrutLo2</object-name>
+		<property>/sim/multiplay/generic/float[4]</property>
+		<factor>-1</factor>
+		<center>
+		    <x-m>2.65</x-m>
+		    <y-m>0</y-m>
+		    <z-m>0.02</z-m>
+		</center>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
 
 	<animation>
 		<name>Left main gear front wheels</name>
 		<type>spin</type>
 		<object-name>GearL1Wheels</object-name>
-		<property>gear/gear[1]/rollspeed-ms</property>
+		<property>/sim/multiplay/generic/float[12]</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -190,7 +209,7 @@
 		<name>Left main gear rear wheels</name>
 		<type>spin</type>
 		<object-name>GearL2Wheels</object-name>
-		<property>gear/gear[1]/rollspeed-ms</property>
+		<property>/sim/multiplay/generic/float[12]</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -207,11 +226,12 @@
 		<name>Left main gear lower strut</name>
 		<type>translate</type>
 		<object-name>GearLStrutLo</object-name>
+		<object-name>GearLStrutLo2</object-name>
 		<object-name>Left main gear front wheels</object-name>
 		<object-name>Left main gear rear wheels</object-name>
 		<expression>
 			<max>
-				<property>gear/gear[1]/compression-m</property>
+				<property>sim/multiplay/generic/float[1]</property>
 			</max>
 		</expression>
 		<axis>
@@ -291,12 +311,31 @@
 			<z-m>3.5</z-m>
 		</center>
 	</animation>
+	
+	 <animation>
+		<type>rotate</type>
+		<object-name>GearR1Wheels</object-name>
+		<object-name>GearR2Wheels</object-name>
+		<object-name>GearRStrutLo2</object-name>
+		<property>/sim/multiplay/generic/float[5]</property>
+		<factor>-1</factor>
+		<center>
+		    <x-m>2.65</x-m>
+		    <y-m>0</y-m>
+		    <z-m>0.02</z-m>
+		</center>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
 
 	<animation>
 		<name>Right main gear front wheels</name>
 		<type>spin</type>
 		<object-name>GearR1Wheels</object-name>
-		<property>gear/gear[2]/rollspeed-ms</property>
+		<property>/sim/multiplay/generic/float[13]</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -313,7 +352,7 @@
 		<name>Right main gear rear wheels</name>
 		<type>spin</type>
 		<object-name>GearR2Wheels</object-name>
-		<property>gear/gear[2]/rollspeed-ms</property>
+		<property>/sim/multiplay/generic/float[13]</property>
 		<factor>15.038</factor>
 		<axis>
 			<x>0</x>
@@ -330,11 +369,12 @@
 		<name>Right main gear lower strut</name>
 		<type>translate</type>
 		<object-name>GearRStrutLo</object-name>
+		<object-name>GearRStrutLo2</object-name>
 		<object-name>Right main gear front wheels</object-name>
 		<object-name>Right main gear rear wheels</object-name>
 		<expression>
 			<max>
-				<property>gear/gear[2]/compression-m</property>
+				<property>sim/multiplay/generic/float[2]</property>
 			</max>
 		</expression>
 		<axis>
