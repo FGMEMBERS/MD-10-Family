@@ -2,7 +2,7 @@ var Radio = gui.Dialog.new("sim/gui/dialogs/radios/dialog",
         "Aircraft/MD-10-Family/Systems/tranceivers.xml");
 		
 var ap_settings = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog",
-        "Aircraft/MD-10-Family/Systems/autopilot-dlg.xml");
+        "Aircraft/MD-10-Family/Systems/autopilot-dlg-ACF.xml");
 
 var tiller_steering = gui.Dialog.new("sim/gui/dialogs/tiller-steering/dialog",
         "Aircraft/MD-10-Family/Systems/tiller-steering.xml");

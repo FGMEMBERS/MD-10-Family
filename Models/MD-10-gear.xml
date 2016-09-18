@@ -476,7 +476,7 @@
 		<name>Center main gear wheels</name>
 		<type>spin</type>
 		<object-name>GearCWheels</object-name>
-		<property>gear/gear[3]/rollspeed-ms</property>
+		<property>gear/gear[0]/rollspeed-ms</property>
 		<factor>18.798</factor>
 		<axis>
 			<x>0</x>
@@ -508,6 +508,12 @@
 		<type>rotate</type>
 		<object-name>Center main gear lower strut</object-name>
 		<object-name>Center main gear upper strut</object-name>
+		<object-name>GearCWheels</object-name>
+		<object-name>GearCScissorLo</object-name>
+		<object-name>GearCScissorHi</object-name>
+		<object-name>GearCStrutLo</object-name>
+		<object-name>GearCCompressLo</object-name>
+		<object-name>GearCCompressHi</object-name>
 		<property>gear/gear[0]/position-norm</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>100</dep></entry>
@@ -525,6 +531,24 @@
 			<y-m>0</y-m>
 			<z-m>2.363</z-m>
 		</center>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Center main gear lower strut</object-name>
+		<object-name>Center main gear upper strut</object-name>
+		<object-name>GearCWheels</object-name>
+		<object-name>GearCScissorLo</object-name>
+		<object-name>GearCScissorHi</object-name>
+		<object-name>GearCStrutLo</object-name>
+		<object-name>GearCCompressLo</object-name>
+		<object-name>GearCCompressHi</object-name>
+		<condition>
+			<greater-than>
+				<property>gear/gear[0]/position-norm</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
 	</animation>
 
 </PropertyList>
