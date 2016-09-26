@@ -251,6 +251,9 @@
             <property-rule n="101">
                 <path>Aircraft/MD-10-Family/Systems/MD11-PFD.xml</path>
             </property-rule>
+			<property-rule n="102">
+                <path>Sounds/MD11-sound-variables.xml</path>
+            </property-rule>
         </systems>
         
         <instrumentation>
@@ -259,7 +262,7 @@
 
 	
         <sound>
-	    <path>Aircraft/MD-10-Family/Sounds/MD-10-external-sound.xml</path>
+	    <path>Aircraft/MD-10-Family/Sounds/MD11-sound.xml</path>
             <stall type="bool">0</stall>
             <click1 type="bool">0</click1>
             <click2 type="bool">0</click2>
@@ -844,6 +847,7 @@
 			<file>Aircraft/MD-10-Family/Nasal/autobrakes.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/pneumatic.nas</file>
             <file>Aircraft/MD-10-Family/Nasal/gear-tilt.nas</file>
+            <file>Aircraft/MD-10-Family/Nasal/efis.nas</file>
         </MD11>
 	<hydraulics>
             <file>Aircraft/MD-10-Family/Nasal/hydraulic.nas</file>
