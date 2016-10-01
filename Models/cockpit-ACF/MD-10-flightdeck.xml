@@ -140,6 +140,16 @@
 </offsets>
 </model>
 
+<model>
+<path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/EFIS/efis_R.xml</path>
+<offsets>
+<x-m>-3.02</x-m>
+<y-m>0.18</y-m>
+<z-m>0.745</z-m>
+<pitch-deg>-10</pitch-deg>
+</offsets>
+</model>
+
 <!-- Standby2-->
 <model>
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/stby-alt/stby-alt.xml</path>
@@ -151,14 +161,24 @@
 </offsets>
 </model>
 
+<model>
+<path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/EFIS/efis_L.xml</path>
+<offsets>
+<x-m>-3.02</x-m>
+<y-m>-0.18</y-m>
+<z-m>0.745</z-m>
+<pitch-deg>-10</pitch-deg>
+</offsets>
+</model>
+
 <!-- Multi-Control Panel -->
 
 <model>
-<path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/FCP/FCP.xml</path>
+<path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/MCP/MCP.xml</path>
 <offsets>
-<x-m>24.35</x-m>
+<x-m>-3.035</x-m>
 <y-m>0</y-m>
-<z-m>-6.0</z-m>
+<z-m>1.124</z-m>
 <pitch-deg>-10</pitch-deg>
 </offsets>
 </model>
@@ -177,10 +197,10 @@
 <model>
 <path>Aircraft/MD-10-Family/Models/cockpit-ACF/Instruments/RadioPanel/radiopanel-right.xml</path>
 <offsets>
-<x-m>-2.911</x-m>
-<y-m>0.0</y-m>
-<z-m>0.692</z-m>
-<pitch-deg>-80.5</pitch-deg>
+<x-m>-2.920</x-m>
+<y-m>0.950</y-m>
+<z-m>0.706</z-m>
+<pitch-deg>-95</pitch-deg>
 </offsets>
 </model>
 <model>
